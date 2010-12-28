@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using SubSonic.BaseClasses;
+using SubSonic.Extensions;
+using SubSonic.SqlGeneration.Schema;
+
+namespace InternetPark.Core
+{
+    [SubSonicTableNameOverride("BookCategories")]
+    public partial class BookCategory : EntityBase<BookCategory>
+    {
+        #region Properties
+
+
+        public override object Id
+        {
+
+            get { return BookCategoryID; }
+            set { BookCategoryID = (int)value; }
+        }
+        public object Id2 {
+            get { return BookID; }
+            set { BookID = (int)value; }
+        
+        }
+
+        [SubSonicPrimaryKey]
+        public int BookCategoryID { get; set; }
+        [SubSonicPrimaryKey]
+        public int BookID { get; set; }
+        
+        #endregion
+
+        public BookCategory()
+        {
+
+        }
+
+        public BookCategory(int? id, int? id2)
+        {
+            if (id != null && id2 != null)
+            {
+                BookCategory entity = Find(p => p.BookID == id2 && p.BookCategoryID == id).FirstOrDefault();
+                if (entity != null)
+                    entity.CopyTo<BookCategory>(this);
+                else
+                {
+                    this.BookID = 0;
+                    this.BookCategoryID = 0;
+                }
+            }
+        }
+
+        public bool Save()
+        {
+            bool rs = false;
+            if (BookID > 0&&BookCategoryID>0)
+                rs = Update(this) > 0;
+            else
+                rs = Add(this) != null;
+            return rs;
+        }
+    }
+}

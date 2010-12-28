@@ -1,0 +1,15 @@
+D:\Internet Park\Source\InternetPark\InternetPark\bin\InternetPark.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\InternetPark.pdb
+D:\Internet Park\Source\InternetPark\InternetPark\obj\Debug\ResolveAssemblyReference.cache
+D:\Internet Park\Source\InternetPark\InternetPark\obj\Debug\InternetPark.dll
+D:\Internet Park\Source\InternetPark\InternetPark\obj\Debug\InternetPark.pdb
+D:\Internet Park\Source\InternetPark\InternetPark\bin\InternetPark.Core.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\StructureMap.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\SubSonic.Core.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\DynamicQuery.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\log4net.dll
+D:\Internet Park\Source\InternetPark\InternetPark\bin\StructureMap.xml
+D:\Internet Park\Source\InternetPark\InternetPark\bin\SubSonic.Core.pdb
+D:\Internet Park\Source\InternetPark\InternetPark\bin\SubSonic.Core.xml
+D:\Internet Park\Source\InternetPark\InternetPark\bin\DynamicQuery.pdb
+D:\Internet Park\Source\InternetPark\InternetPark\bin\InternetPark.Core.pdb
