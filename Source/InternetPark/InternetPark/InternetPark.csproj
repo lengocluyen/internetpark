@@ -67,6 +67,8 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Style\960_24_col.css" />
+    <Content Include="Style\reset.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
