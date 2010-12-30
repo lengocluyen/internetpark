@@ -1,0 +1,153 @@
+﻿body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+.book table{float:left;}
+.booktitle
+{
+	float:left;
+	font-size:18px;
+	font-weight:bold;
+	color:green;
+}
+.booktitle a{
+	color:green;
+	text-decoration:none;
+}
+.bookdetail
+{
+	font-weight:lighter;
+	font-size:11px;
+	color:gray;
+}
+.pg-wrapper, .pg-album {
+    border: 1px solid #ccc;
+    padding: 1px;
+}
+.bookintro{
+	text-align:justify;
+	min-height:160px;
+}
+.photo-grid td a:hover div {
+    border-color: #777;
+}
+.photo-grid td img {
+    margin: 1px;
+    height:185px;
+	width:146px;
+    border: solid 1px #ccc !important;
+}
+hr{
+	border-top:1px gray dotted;
+}
+
+/* -----------------------------------------------------------
+	content -> right -> pagination
+----------------------------------------------------------- */
+
+#content div.box div.pagination
+{
+	margin: 10px 0 0 0;
+	padding: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+#content div.box div.pagination div.results
+{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	float: left
+}
+
+#content div.box div.pagination div.results span 
+{
+	margin: 0;
+	padding: 6px 8px 6px 8px;
+	display: block;
+	float: left;
+	background: #ebebeb url("images/pager.png") repeat-x;
+	border-top: 1px solid #dedede;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+	color: #4A4A4A;
+	font-weight: bold;
+}
+
+#content div.box div.pagination ul.pager
+{
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-align: right;
+}
+
+#content div.box div.pagination ul.pager li
+{
+	margin: 0 0 0 4px;
+	padding: 0;
+	height:28px;
+		float: left;
+	list-style: none;
+	background: #ebebeb url('Images/pager.png') repeat-x;
+	border-top: 1px solid #dedede;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+	color: #4A4A4A;
+	font-weight: bold;
+}
+
+#content div.box div.pagination ul.pager li.separator
+{
+	padding: 6px;   
+		height:16px;
+
+}
+
+#content div.box div.pagination ul.pager li.current
+{
+	padding: 6px;   
+	background: #b4b4b4 url("images/pager_selected.png") repeat-x;
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #bebebe;
+	border-right: 1px solid #b1b1b1;
+	border-bottom: 1px solid #afafaf;
+	color: #515151;
+		height:16px;
+
+}
+
+#content div.box div.pagination ul.pager li.disabled
+{
+	padding: 6px;
+	color: #B4B4B4;
+	height:16px;
+
+}
+
+#content div.box div.pagination ul.pager li a 
+{
+	margin: 0;
+	padding: 6px;
+	display: block;
+	float: left;
+	color: #515151;
+	text-decoration: none;
+	height:28px;
+
+}
+
+#content div.box div.pagination ul.pager li a:hover, 
+#content div.box div.pagination ul.pager li a:active 
+{
+	margin: -1px;
+	background: #b4b4b4 url("images/pager_selected.png") repeat-x;
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #bebebe;
+	border-right: 1px solid #b1b1b1;
+	border-bottom: 1px solid #afafaf;
+}
+

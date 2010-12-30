@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage_FE.master.cs"
+    Inherits="InternetPark.MasterPage_FE" %>
+
+<%@ Register Src="FrontEnd/Banner/Banner.ascx" TagName="Banner" TagPrefix="uc1" %>
+<%@ Register Src="FrontEnd/Left/Left.ascx" TagName="Left" TagPrefix="uc2" %>
+<%@ Register Src="FrontEnd/Footer/Footer.ascx" TagName="Footer" TagPrefix="uc3" %>
+<%@ Register Src="FrontEnd/Right/Right.ascx" TagName="Right" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="Style/960_24_col.css" rel="stylesheet" type="text/css" />
+    <link href="Style/reset.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="Style/style.css" rel="stylesheet" type="text/css" />
+    <%--<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container_24">
+        <!--Header-->
+        <uc1:Banner ID="Banner1" runat="server" />
+        <div class="grid_24">&nbsp;
+        </div>
+        <div class="clear">
+        </div>
+        <!--Content-->
+        <!--Left--->
+        <div class="grid_5">
+            <uc2:Left ID="Left1" runat="server" />
+        </div>
+        <div class="grid_14">
+            <!--List book-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <uc4:Right ID="Right1" runat="server" />
+        <div class="clear">
+        </div>
+        <br />
+        <!--Footer--->
+        <uc3:Footer ID="Footer1" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
