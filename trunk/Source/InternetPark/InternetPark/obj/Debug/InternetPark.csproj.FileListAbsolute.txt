@@ -13,3 +13,18 @@ D:\Internet Park\Source\InternetPark\InternetPark\bin\SubSonic.Core.pdb
 D:\Internet Park\Source\InternetPark\InternetPark\bin\SubSonic.Core.xml
 D:\Internet Park\Source\InternetPark\InternetPark\bin\DynamicQuery.pdb
 D:\Internet Park\Source\InternetPark\InternetPark\bin\InternetPark.Core.pdb
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\InternetPark.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\InternetPark.pdb
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\InternetPark.Core.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\StructureMap.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\SubSonic.Core.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\DynamicQuery.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\log4net.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\StructureMap.xml
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\SubSonic.Core.pdb
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\SubSonic.Core.xml
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\DynamicQuery.pdb
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\bin\InternetPark.Core.pdb
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\obj\Debug\ResolveAssemblyReference.cache
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\obj\Debug\InternetPark.dll
+D:\Internet_Park\Source\Source\InternetPark\InternetPark\obj\Debug\InternetPark.pdb
