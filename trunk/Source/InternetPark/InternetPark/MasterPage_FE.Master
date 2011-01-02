@@ -17,29 +17,43 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container_24">
-        <!--Header-->
+    <div>
         <uc1:Banner ID="Banner1" runat="server" />
-        <div class="grid_24">&nbsp;
+        <div class="container_24">
+            <!--Header-->
+            <%--div>
+            
+            </div>--%>
+            <div class="grid_15">
+                &nbsp;
+            </div>
+            <div class="clear">
+            </div>
+            <!--Content-->
+            <!--Left--->
+            <div>
+                <div class="grid_5">
+                    <uc2:Left ID="Left1" runat="server" />
+                </div>
+                <div style="float: left; width: 2px; height: 300px; background: #ffffff url('Images/line_column.png') repeat-y;">
+                </div>
+                <div class="grid_14">
+                    <!--List book-->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div style="float: left; width: 2px; height: 300px; background: #ffffff url('Images/line_column.png') repeat-y;">
+                </div>
+                <div class="grid_5">
+                    <uc4:Right ID="Right1" runat="server" />
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <br />
+            <!--Footer--->
+            <uc3:Footer ID="Footer1" runat="server" />
         </div>
-        <div class="clear">
-        </div>
-        <!--Content-->
-        <!--Left--->
-        <div class="grid_5">
-            <uc2:Left ID="Left1" runat="server" />
-        </div>
-        <div class="grid_14">
-            <!--List book-->
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <uc4:Right ID="Right1" runat="server" />
-        <div class="clear">
-        </div>
-        <br />
-        <!--Footer--->
-        <uc3:Footer ID="Footer1" runat="server" />
     </div>
     </form>
 </body>

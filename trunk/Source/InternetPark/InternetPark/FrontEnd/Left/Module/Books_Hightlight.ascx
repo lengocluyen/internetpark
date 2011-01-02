@@ -1,11 +1,13 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Books_Hightlight.ascx.cs" Inherits="InternetPark.FrontEnd.Left.Module.Books_Hightlight" %>
-<div class="Widget">
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Books_Hightlight.ascx.cs"
+    Inherits="InternetPark.FrontEnd.Left.Module.Books_Hightlight" %>
+<div class="widget">
     <h2>
-        Danh muc</h2>
+        Danh mục sách</h2>
+    <img src="Images/line_category.png" height="6px" />
     <ul>
-        <li><a>Sach Moi Cap Nhat</a></li>
-        <li><a>Xem Nhieu Nhat</a></li>
-        <li><a>Tai Ve Nhieu Nhat</a></li>
-        <li><a>Sach Danh gia cao</a></li>
+        <li><a href="#">Sách mới cập nhật</a></li>
+        <li><a href="#">Xem nhiều nhất</a></li>
+        <li><a href="#">Tải nhiểu nhất</a></li>
+        <li><a href="#">Sách đánh giá cao</a></li>
     </ul>
 </div>

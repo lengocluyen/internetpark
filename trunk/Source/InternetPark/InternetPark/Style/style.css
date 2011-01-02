@@ -1,44 +1,64 @@
-﻿body{
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:14px;
+﻿body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #EAEBBD; /* url('../Images/background.png') repeat-x;*/
 }
-.book table{float:left;}
+.book table
+{
+	float: left;
+}
 .booktitle
 {
-	float:left;
-	font-size:18px;
-	font-weight:bold;
-	color:green;
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: green;
 }
-.booktitle a{
-	color:green;
-	text-decoration:none;
+.booktitle a
+{
+	color: green;
+	text-decoration: none;
 }
 .bookdetail
 {
-	font-weight:lighter;
-	font-size:11px;
-	color:gray;
+	font-weight: lighter;
+	font-size: 11px;
+	color: gray;
 }
-.pg-wrapper, .pg-album {
-    border: 1px solid #ccc;
-    padding: 1px;
+.bookdownload, .bookdownload a
+{
+	color: #0000FF;
+	font-size: 12px;
+	text-align: right;
+	text-decoration:none;
 }
-.bookintro{
-	text-align:justify;
-	min-height:160px;
+.pg-wrapper, .pg-album
+{
+	border: 1px solid #ccc;
+	padding: 1px;
 }
-.photo-grid td a:hover div {
-    border-color: #777;
+.bookintro
+{
+	text-align: justify;
+	min-height: 160px;
+	color: #000000;
+	font-size:14px;
 }
-.photo-grid td img {
-    margin: 1px;
-    height:185px;
-	width:146px;
-    border: solid 1px #ccc !important;
+.photo-grid td a:hover div
+{
+	border-color: #777;
 }
-hr{
-	border-top:1px gray dotted;
+.photo-grid td img
+{
+	margin: 1px;
+	height: 185px;
+	width: 146px;
+	border: solid 1px #ccc !important;
+}
+hr
+{
+	border-top: 1px gray dotted;
 }
 
 /* -----------------------------------------------------------
@@ -58,16 +78,16 @@ hr{
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	float: left
+	float: left;
 }
 
-#content div.box div.pagination div.results span 
+#content div.box div.pagination div.results span
 {
 	margin: 0;
 	padding: 6px 8px 6px 8px;
 	display: block;
 	float: left;
-	background: #ebebeb url("images/pager.png") repeat-x;
+	background: #ebebeb url( "images/pager.png" ) repeat-x;
 	border-top: 1px solid #dedede;
 	border-left: 1px solid #cfcfcf;
 	border-right: 1px solid #c4c4c4;
@@ -88,10 +108,10 @@ hr{
 {
 	margin: 0 0 0 4px;
 	padding: 0;
-	height:28px;
-		float: left;
+	height: 28px;
+	float: left;
 	list-style: none;
-	background: #ebebeb url('Images/pager.png') repeat-x;
+	background: #ebebeb url( 'Images/pager.png' ) repeat-x;
 	border-top: 1px solid #dedede;
 	border-left: 1px solid #cfcfcf;
 	border-right: 1px solid #c4c4c4;
@@ -102,33 +122,30 @@ hr{
 
 #content div.box div.pagination ul.pager li.separator
 {
-	padding: 6px;   
-		height:16px;
-
+	padding: 6px;
+	height: 16px;
 }
 
 #content div.box div.pagination ul.pager li.current
 {
-	padding: 6px;   
-	background: #b4b4b4 url("images/pager_selected.png") repeat-x;
+	padding: 6px;
+	background: #b4b4b4 url( "images/pager_selected.png" ) repeat-x;
 	border-top: 1px solid #cccccc;
 	border-left: 1px solid #bebebe;
 	border-right: 1px solid #b1b1b1;
 	border-bottom: 1px solid #afafaf;
 	color: #515151;
-		height:16px;
-
+	height: 16px;
 }
 
 #content div.box div.pagination ul.pager li.disabled
 {
 	padding: 6px;
 	color: #B4B4B4;
-	height:16px;
-
+	height: 16px;
 }
 
-#content div.box div.pagination ul.pager li a 
+#content div.box div.pagination ul.pager li a
 {
 	margin: 0;
 	padding: 6px;
@@ -136,18 +153,71 @@ hr{
 	float: left;
 	color: #515151;
 	text-decoration: none;
-	height:28px;
-
+	height: 28px;
 }
 
-#content div.box div.pagination ul.pager li a:hover, 
-#content div.box div.pagination ul.pager li a:active 
+#content div.box div.pagination ul.pager li a:hover, #content div.box div.pagination ul.pager li a:active
 {
 	margin: -1px;
-	background: #b4b4b4 url("images/pager_selected.png") repeat-x;
+	background: #b4b4b4 url( "images/pager_selected.png" ) repeat-x;
 	border-top: 1px solid #cccccc;
 	border-left: 1px solid #bebebe;
 	border-right: 1px solid #b1b1b1;
 	border-bottom: 1px solid #afafaf;
 }
 
+/*Linh viet them*/
+
+.banner_container
+{
+	width: 1274px;
+	height: 215px;
+	background: #EAEBBD url( '../Images/banner.png' ) no-repeat;
+}
+.space
+{
+	width: 100%;
+	height: 125px;
+}
+.menu
+{
+	float: left;
+	width: 30%;
+	padding-left: 170px;
+}
+.search
+{
+	float: right;
+	width: 50%;
+	margin-top: 50px;
+	vertical-align: bottom;
+	height: 25px;
+}
+.widget_center
+{text-align:left;
+ color: #6A6A00;font-size: 18px;}
+ 
+.widget
+{
+	text-align: center;
+	color: #3EAEF8;
+}
+.widget h2
+{
+	text-transform: uppercase;
+	color: #6A6A00;
+	font-size: 18px;
+}
+.widget ul li
+{
+	text-decoration:none;
+	text-align: left;
+	height: 20px;
+	border-bottom: solid 1px #6A6A00;
+	text-indent: 20px;
+	margin-top: 10px;	
+}
+.widget ul li a
+{text-decoration:none;color:#0066D4;}
+.widget ul li a:hover
+{color:Red;}
