@@ -7,8 +7,8 @@
 <%@ Register Src="FrontEnd/Right/Right.ascx" TagName="Right" TagPrefix="uc4" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Untitled Page</title>
+<head>
+    <title>.: Internet Park :.</title>
     <link href="Style/960_24_col.css" rel="stylesheet" type="text/css" />
     <link href="Style/reset.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="Style/style.css" rel="stylesheet" type="text/css" />

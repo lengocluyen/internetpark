@@ -10,15 +10,11 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
-using InternetPark.Core;
 
-namespace InternetPark.FrontEnd.Banner
+public partial class FrontEnd_Center_Module_Index : System.Web.UI.UserControl
 {
-    public partial class Banner : System.Web.UI.UserControl
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
