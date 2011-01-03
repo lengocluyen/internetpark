@@ -6,9 +6,13 @@ namespace InternetPark.Core
 {
     public class Configuration : IConfiguration
     {
-        public int ItemperPage {
-            get { return Convert.ToInt32(getAppSetting(typeof(int), "ItemperPage")); } }
-      
+        public int ItemperPageUser {
+            get { return Convert.ToInt32(getAppSetting(typeof(int), "ItemperPageUser")); }
+        }
+        public int ItemperPageAdmin
+        {
+            get { return Convert.ToInt32(getAppSetting(typeof(int), "ItemperPageAdmin")); }
+        }
         public string AdminSiteURL
         {
             get { return getAppSetting(typeof (string), "AdminSiteURL").ToString(); }
