@@ -24,6 +24,9 @@
                     <th>
                         Thông số
                     </th>
+                    <th style="width: 70px;">
+                        Chỉnh sửa
+                    </th>
                     <th class="selected last">
                         <input type="checkbox" class="checkall" />
                     </th>
@@ -32,8 +35,59 @@
             <tbody>
                 <tr>
                     <td class="name">
+                    Số Item trên một trang người dùng
                     </td>
                     <td class="value">
+                    
+                    </td>
+                    <td align="center" class="edit">
+                        <a href="Defaults.aspx?do=setting&sid=<%#DataBinder.Eval(Container.DataItem,"UserID")%>">
+                            <img src="../Images/edit.jpg" height="12px" alt="Chỉnh sửa" /></a>
+                    </td>
+                    <td class="selected last">
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name">
+                    Số Item trên một trang quản trị
+                    </td>
+                    <td class="value">
+                    
+                    </td>
+                    <td align="center" class="edit">
+                        <a href="Defaults.aspx?do=setting&sid=<%#DataBinder.Eval(Container.DataItem,"UserID")%>">
+                            <img src="../Images/edit.jpg" height="12px" alt="Chỉnh sửa" /></a>
+                    </td>
+                    <td class="selected last">
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name">
+                    Địa chỉ gốc trang người dùng:
+                    </td>
+                    <td class="value">
+                    
+                    </td>
+                    <td align="center" class="edit">
+                        <a href="Defaults.aspx?do=setting&sid=<%#DataBinder.Eval(Container.DataItem,"UserID")%>">
+                            <img src="../Images/edit.jpg" height="12px" alt="Chỉnh sửa" /></a>
+                    </td>
+                    <td class="selected last">
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name">
+                    Địa chỉ gốc trang quản trị:
+                    </td>
+                    <td class="value">
+                    
+                    </td>
+                    <td align="center" class="edit">
+                        <a href="Defaults.aspx?do=setting&sid=<%#DataBinder.Eval(Container.DataItem,"UserID")%>">
+                            <img src="../Images/edit.jpg" height="12px" alt="Chỉnh sửa" /></a>
                     </td>
                     <td class="selected last">
                         <input type="checkbox" />
@@ -42,7 +96,7 @@
             </tbody>
         </table>
         <!-- pagination -->
-        <div class="pagination pagination-left">
+       <%-- <div class="pagination pagination-left">
             <div class="results">
                 <span>showing results 1-10 of 207</span>
             </div>
@@ -58,7 +112,7 @@
                 <li><a href="">21</a></li>
                 <li><a href="">next &raquo;</a></li>
             </ul>
-        </div>
+        </div>--%>
         <!-- end pagination -->
         <!-- table action -->
         <div class="action">
