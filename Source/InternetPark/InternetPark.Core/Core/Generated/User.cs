@@ -24,7 +24,7 @@ namespace InternetPark.Core
         [SubSonicPrimaryKey]
         public int UserID { get; set; }
         public string Email { get; set; }
-        public int Password { get; set; }
+        public string Password { get; set; }
         public int RoleID { get; set; }
         public bool IsEnabled { get; set; }
         #endregion

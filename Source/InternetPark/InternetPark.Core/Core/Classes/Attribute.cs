@@ -9,6 +9,14 @@ namespace InternetPark.Core
 {
     public partial class Attribute
     {
-        // all method is static 
+        // all method is static
+        public static Attribute GetAttributeByID(int id)
+        {
+            return Single(id);
+        }
+        public static IQueryable<Attribute> GetAllAttribute()
+        {
+            return All();
+        }
     }
 }
