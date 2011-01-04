@@ -8,18 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InternetPark.FrontEnd.Center {
+
+
+public partial class FrontEnd_Center_Center {
     
-    
-    public partial class Center {
-        
-        /// <summary>
-        /// Books1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::InternetPark.FrontEnd.Center.Module.Books Books1;
-    }
+    /// <summary>
+    /// CenterPanel control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Panel CenterPanel;
 }
