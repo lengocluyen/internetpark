@@ -97,7 +97,7 @@
                 <!-- pagination -->
                 <div class="pagination pagination-left">
                     <div class="results">
-                        <UCPager:Pager ID="pager" runat="server" />
+                      <UCPager:Pager ID="pager" runat="server" />  
                     </div>
                     <!-- table action -->
                     <div class="action" style="margin-top: 0px;">

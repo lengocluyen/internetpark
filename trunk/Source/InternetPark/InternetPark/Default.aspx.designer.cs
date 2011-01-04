@@ -8,18 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InternetPark {
+
+
+public partial class _Default {
     
-    
-    public partial class Default {
-        
-        /// <summary>
-        /// Center1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::InternetPark.FrontEnd.Center.Center Center1;
-    }
+    /// <summary>
+    /// Center1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::FrontEnd_Center_Center Center1;
 }

@@ -3,25 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetPark.Core", "InternetPark.Core\InternetPark.Core.csproj", "{55D64652-E0BF-4DC9-8D51-0294A4085D84}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "InternetPark", "InternetPark\", "{56CD555A-638F-4729-8A20-19EF37A92827}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFramework = "3.5"
-		Debug.AspNetCompiler.VirtualPath = "/InternetPark"
-		Debug.AspNetCompiler.PhysicalPath = "InternetPark\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\InternetPark\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/InternetPark"
-		Release.AspNetCompiler.PhysicalPath = "InternetPark\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\InternetPark\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "49177"
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetPark", "InternetPark\InternetPark.csproj", "{695A58DC-9E43-4CE0-928F-7AE9862AEC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,16 +25,16 @@ Global
 		{55D64652-E0BF-4DC9-8D51-0294A4085D84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55D64652-E0BF-4DC9-8D51-0294A4085D84}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{55D64652-E0BF-4DC9-8D51-0294A4085D84}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Debug|.NET.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Debug|.NET.Build.0 = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Debug|Any CPU.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Debug|Mixed Platforms.Build.0 = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Release|.NET.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Release|.NET.Build.0 = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Release|Any CPU.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
-		{56CD555A-638F-4729-8A20-19EF37A92827}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Release|.NET.ActiveCfg = Release|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{695A58DC-9E43-4CE0-928F-7AE9862AEC27}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

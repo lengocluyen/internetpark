@@ -76,6 +76,7 @@
     <Compile Include="Core\Generated\Category.cs" />
     <Compile Include="Core\Generated\Role.cs" />
     <Compile Include="Core\Generated\User.cs" />
+    <Compile Include="Core\Handle\Pager.cs" />
     <Compile Include="Core\ICaptcha.cs" />
     <Compile Include="Core\IConfiguration.cs" />
     <Compile Include="Core\Impl\Captcha.cs" />
