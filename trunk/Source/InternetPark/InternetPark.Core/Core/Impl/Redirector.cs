@@ -14,6 +14,14 @@ namespace InternetPark.Core
         {
             Redirect("~/Error.aspx");
         }
+        public void GotoLoginPage()
+        {
+            Redirect("~/CMS/Login.aspx");
+        }
+        public void GotoAdminPage()
+        {
+            Redirect("~/CMS/Default.aspx");
+        }
         private void Redirect(string path)
         {
             HttpContext.Current.Response.Redirect(path);

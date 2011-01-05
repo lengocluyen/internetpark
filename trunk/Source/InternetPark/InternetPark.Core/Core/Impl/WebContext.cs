@@ -104,6 +104,36 @@ namespace InternetPark.Core
                 SetInSession("LoggedIn", value);
             }
         }
+        public DateTime TimeUserLogin
+        {
+            get
+            {
+                if (ContainsInSession("TimeUserLogin"))
+                {
+                    return Convert.ToDateTime(GetFromSession("TimeUserLogin"));
+                }
+                return DateTime.Now;
+            }
+            set
+            {
+                SetInSession("TimeUserLogin", value);
+            }
+        }
+        public Role RoleCurrentUser
+        {
+            get
+            {
+                if (ContainsInSession("RoleCurrentUser"))
+                {
+                    return GetFromSession("RoleCurrentUser") as Role;
+                }
+                return null;
+            }
+            set
+            {
+                SetInSession("RoleCurrentUser", value);
+            }
+        }
 
 
         public void ClearSession()
