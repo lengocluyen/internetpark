@@ -190,7 +190,7 @@
         </div>
     </div>
     <!-- messages -->
-     <div id="box-tabs" class="box">
+    <div id="box-tabs" class="box">
         <!-- box / title -->
         <div class="title">
             <h5>
@@ -202,7 +202,7 @@
             </ul>
         </div>
         <!-- box / title -->
-       <div id="box-messages">
+        <div id="box-messages">
             <div class="messages">
                 <div id="message-error" class="message message-error">
                     <div class="image">
@@ -490,7 +490,7 @@
     </div>
     <!-- end forms -->
     <!-- box / left -->
-   <%-- <div id="box-left-tabs" class="box box-left box-padding">
+     <div id="box-left-tabs" class="box box-left box-padding">
         <!-- box / title -->
         <div class="title">
             <h5>
@@ -625,7 +625,7 @@
                 This is a definition list division.</dd>
         </dl>
         <!-- end headings -->
-    </div>--%>
+    </div>
     <!-- end box / right -->
 </div>
 <!-- end content / right -->

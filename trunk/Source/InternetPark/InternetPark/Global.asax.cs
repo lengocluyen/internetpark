@@ -39,18 +39,41 @@ namespace InternetPark
 
                 x.For(typeof(ICaptcha)).LifecycleIs(InstanceScope.PerRequest).Use(typeof(Captcha));
 
-
                 //x.For(typeof(SubSonic.Caching.ICacheConfigReader))
                 //  .LifecycleIs(InstanceScope.PerRequest)
                 //  .Use(typeof(SubSonic.Caching.CacheConfigFromXml));
 
             });
+            InternetPark.Core.Statistics statistics = new InternetPark.Core.Statistics(Server.MapPath("~/statistics.xml"));
+            // Code that runs on application startup
+            Application["totalvisits"] = 1;
+            Application["online"] = 0;
+            Application["totalvisitsday"] = 1;
+            Application["totalvisitsweek"] = 1;
+            Application["totalvisitsmonth"] = 1;
 
+            //neu ma tu 8h sang den 10h dem cho nguoi dung tu 10 den 100 nguoi
+            //if (DateTime.Now.Hour >= 8 && DateTime.Now.Hour <= 22)
+            //    Application["onlinevirtual"] = statistics.Ramdom(10, 100);
+            //else
+            //    Application["onlinevirtual"] = statistics.Ramdom(0, 10);
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            // Code that runs when a new session is started
+            InternetPark.Core.Statistics statistics = new InternetPark.Core.Statistics(Server.MapPath("~/statistics.xml"));
+            //sua so nguoi truy cap ao o day onlinevirtual 
+            Application.Lock();
+            Application["online"] = Convert.ToInt32(Application["online"]) + 1;
+            //Application["onlinevirtual"] = Convert.ToInt32(Application["onlinevirtual"]) + 1;
+            Application.UnLock();
+            Application.Lock();
+            Application["totalvisits"] = statistics.ReadField("totalvisits");
+            statistics.WriteField("totalvisits", statistics.ReadField("totalvisits") + 1);
+            Application["totalvisitsday"] = statistics.GetVisiterInDay();
+            Application["totalvisitsweek"] = statistics.GetVisiterInWeek();
+            Application["totalvisitsmonth"] = statistics.GetVisiterInMonth();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -75,7 +98,10 @@ namespace InternetPark
 
         protected void Application_End(object sender, EventArgs e)
         {
-
+            Application.Lock();
+            Application["online"] = Convert.ToInt32(Application["online"]) - 1;
+            //Application["onlinevirtual"] = Convert.ToInt32(Application["onlinevirtual"]) - 1;
+            Application.UnLock();
         }
     }
 }

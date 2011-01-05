@@ -19,7 +19,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-        style_path = "../resources/css/colors";
+            style_path = "../resources/css/colors";
 
             $("input.focus").focus(function() {
                 if (this.value == this.defaultValue) {
@@ -39,6 +39,7 @@
             $("input:submit, input:reset").button();
         });
     </script>
+
 </head>
 <body>
     <div id="login">
@@ -51,33 +52,35 @@
             <div class="corner tr">
             </div>
         </div>
-        <%--<div class="messages">
+        <div class="messages" runat="server" id="divMessage" visible="false">
             <div id="message-error" class="message message-error">
                 <div class="image">
                     <img src="../resources/images/icons/error.png" alt="Error" height="32" />
                 </div>
                 <div class="text">
                     <h6>
-                        Error Message</h6>
-                    <span>This is the error message.</span>
+                        Thông báo</h6>
+                    <span>Email hoặc mật khẩu không đúng.</span>
                 </div>
                 <div class="dismiss">
                     <a href="#message-error"></a>
                 </div>
             </div>
-        </div>--%>
+        </div>
         <div class="inner">
-            <form action="index.html" method="get">
+            <form id="form1" runat="server">
             <div class="form">
                 <!-- fields -->
                 <div class="fields">
                     <div class="field">
                         <div class="label">
-                            <label for="username">
-                                Username:</label>
+                            <label for="username"> 
+                                Email:</label>
                         </div>
                         <div class="input">
-                            <input type="text" id="username" name="username" size="40" value="admin" class="focus" />
+                            <asp:TextBox ID="txtMail" runat="server" CssClass="focus"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage=""
+                                ControlToValidate="txtMail" Display="Dynamic" ValidationGroup="LoginGroup" />
                         </div>
                     </div>
                     <div class="field">
@@ -86,7 +89,9 @@
                                 Password:</label>
                         </div>
                         <div class="input">
-                            <input type="password" id="password" name="password" size="40" value="password" class="focus" />
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="focus"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage=""
+                                ControlToValidate="txtPassword" Display="Dynamic" ValidationGroup="LoginGroup" />
                         </div>
                     </div>
                     <div class="field">
@@ -97,13 +102,13 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <input type="submit" value="Sign In" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Sign in" OnClick="btn_Click" ValidationGroup="LoginGroup" />
                     </div>
                 </div>
                 <!-- end fields -->
                 <!-- links -->
                 <div class="links">
-                    <a href="index.html">Forgot your password?</a>
+                    <a href="../default.aspx">Forgot your password?</a>
                 </div>
                 <!-- end links -->
             </div>
@@ -111,12 +116,10 @@
         </div>
         <!-- end login -->
         <div id="colors-switcher" class="color">
-             <a href="" class="blue" title="Blue"></a>
-             <a href="" class="green" title="Green"></a>
-             <a href="" class="brown" title="Brown"></a>
-             <a href="" class="purple" title="Purple"></a>
-             <a href="" class="red" title="Red"></a>
-             <a href="" class="greyblue" title="GreyBlue"></a>
+            <a href="" class="blue" title="Blue"></a><a href="" class="green" title="Green">
+            </a><a href="" class="brown" title="Brown"></a><a href="" class="purple" title="Purple">
+            </a><a href="" class="red" title="Red"></a><a href="" class="greyblue" title="GreyBlue">
+            </a>
         </div>
     </div>
 </body>

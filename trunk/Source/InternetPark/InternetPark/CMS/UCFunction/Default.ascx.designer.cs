@@ -8,16 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-
-public partial class FrontEnd_Center_Center {
+namespace InternetPark.CMS.UCFunction {
     
-    /// <summary>
-    /// CenterPanel control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Panel CenterPanel;
+    
+    public partial class Default {
+    }
 }

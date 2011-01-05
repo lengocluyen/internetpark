@@ -8,18 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InternetPark.CMS {
+namespace InternetPark.CMS.UCFunction {
     
     
-    public partial class Default {
+    public partial class Statistics {
         
         /// <summary>
-        /// phContent control.
+        /// rpCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phContent;
+        protected global::System.Web.UI.WebControls.Repeater rpCategory;
     }
 }

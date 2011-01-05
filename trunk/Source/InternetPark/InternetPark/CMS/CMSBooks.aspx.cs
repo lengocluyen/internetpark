@@ -47,6 +47,9 @@ namespace InternetPark.CMS
                     case "add":
                         LoadControls();
                         break;
+                    case "addmany":
+                        LoadControlImport();
+                        break;
                     case "del":
                         if (Request.Params["aid"] != null)
                         {
@@ -110,6 +113,11 @@ namespace InternetPark.CMS
             Control addEditCategory = (Control)Page.LoadControl("~/CMS/UCFunction/AddEditBook.ascx");
             this.phAddEditCategory.Controls.Add(addEditCategory);
         }
+        void LoadControlImport()
+        {
+            Control importExcel = (Control)Page.LoadControl("~/CMS/UCFunction/ImportBookExcel.ascx");
+            this.phAddEditCategory.Controls.Add(importExcel);
+        }
         public void LoadBookPaging(PagedList<Book> books)
         {
             PagedList<Book> list = books;
@@ -122,7 +130,7 @@ namespace InternetPark.CMS
         }
         public string GetCategoryBook(object id)
         {
-            return Category.Single(BookCategory.Single(b => b.BookID == int.Parse(id.ToString())).BookCategoryID).Name;
+            return Category.Single(BookCategory.Single(b => b.BookID == int.Parse(id.ToString())).BookID).Name;
         }
     }
 }

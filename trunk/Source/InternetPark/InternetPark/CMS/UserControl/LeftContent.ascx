@@ -31,8 +31,7 @@
         <h6 id="h-menu-settings">
             <a href="#settings"><span>Settings</span></a></h6>
         <ul id="menu-settings" class="closed">
-            <li><a href="">Manage Settings</a></li>
-            <li class="last"><a href="">New Setting</a></li>
+            <li class="last"><a href="../CMS/Default.aspx?do=setting">Manage Settings</a></li>
         </ul>
     </div>
     <div id="date-picker">
