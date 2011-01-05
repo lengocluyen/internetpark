@@ -14,6 +14,8 @@ namespace InternetPark.Core
         string Username { get; set;  }
         User CurrentUser { get; set; }
         string CaptchaImageText { get; set; }
+        DateTime TimeUserLogin { get; set; }
+        Role RoleCurrentUser { get; set; }
       
     }
 }
