@@ -14,15 +14,6 @@ namespace InternetPark.CMS.UCFunction {
     public partial class AddEditBook {
         
         /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ScriptManager1;
-        
-        /// <summary>
         /// idNotice control.
         /// </summary>
         /// <remarks>
@@ -131,22 +122,22 @@ namespace InternetPark.CMS.UCFunction {
         protected global::System.Web.UI.WebControls.TextBox txtPublisher;
         
         /// <summary>
-        /// AsyncFileUploadImage control.
+        /// txtImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.AsyncFileUpload AsyncFileUploadImage;
+        protected global::System.Web.UI.WebControls.TextBox txtImage;
         
         /// <summary>
-        /// myThrobberImage control.
+        /// RequiredFieldValidatorImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label myThrobberImage;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorImage;
         
         /// <summary>
         /// uploadResultImage control.
@@ -158,22 +149,31 @@ namespace InternetPark.CMS.UCFunction {
         protected global::System.Web.UI.WebControls.Label uploadResultImage;
         
         /// <summary>
-        /// AsyncFileUploadBook control.
+        /// txtUrl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.AsyncFileUpload AsyncFileUploadBook;
+        protected global::System.Web.UI.WebControls.TextBox txtUrl;
         
         /// <summary>
-        /// myThrobberBook control.
+        /// rfvUrl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label myThrobberBook;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUrl;
+        
+        /// <summary>
+        /// txtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSize;
         
         /// <summary>
         /// uploadResultBook control.

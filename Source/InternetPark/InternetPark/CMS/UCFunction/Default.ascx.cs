@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace InternetPark.CMS.UCFunction
 {
-    public partial class ImportBookExcelascx : System.Web.UI.UserControl
+    public partial class Default : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-        public void btnSubmit_Click(object sender, EventArgs e)
-        { 
         }
     }
 }

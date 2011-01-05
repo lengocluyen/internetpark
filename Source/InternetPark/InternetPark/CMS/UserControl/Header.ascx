@@ -3,20 +3,19 @@
 		<div id="header">
 			<!-- logo -->
 			<div id="logo">
-				<h1><a href="" title="Công Viên Internet!"><img src="../../resources/images/logo.png" alt="Công Viên Internet" /></a></h1>
+				<h1><a href="../Default.aspx" title="Công Viên Internet!"><img src="../../resources/images/logo.png" alt="Công Viên Internet" /></a></h1>
 			</div>
 			<!-- end logo -->
 			<!-- user -->
 			<ul id="user">
-				<li class="first"><a href="">Account</a></li>
-				<li><a href="">Messages (0)</a></li>
-				<li><a href="">Logout</a></li>
-				<li class="highlight last"><a href="">View Site</a></li>
+				<li class="first"><a href=""><%--<%= this._userSession.Username.Substring(0,this._userSession.Username.LastIndexOf('@')) %>--%></a></li>
+				<li><a href="../CMS/login.aspx?do=logout">Logout</a></li>
+				<li class="highlight last"><a href="../Default.aspx">View Site</a></li>
 			</ul>
 			<!-- end user -->
 			<div id="header-inner">
 				<div id="home">
-					<a href="" title="Home"></a>
+					<a href="../CMS/Default.aspx" title="Home"></a>
 				</div>
 				<!-- quick -->
 				<ul id="quick">
@@ -55,8 +54,7 @@
 					<li>
 						<a href="" title="Settings"><span class="icon"><img src="../../resources/images/icons/cog.png" alt="Settings" /></span><span>Settings</span></a>
 						<ul>
-							<li><a href="#">Manage Settings</a></li>
-							<li class="last"><a href="#">New Setting</a></li>
+							<li class="last"><a href="../CMS/Default.aspx?do=setting">Manage Settings</a></li>
 						</ul>
 					</li>
 				</ul>

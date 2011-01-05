@@ -4,5 +4,5 @@
 <asp:Content ID="header" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="icontent" ContentPlaceHolderID="Content" runat="server">
-<UC:ContentDemo ID="idContent" runat="server" />
+<asp:PlaceHolder ID="phContent" runat="server"></asp:PlaceHolder>
 </asp:Content>
