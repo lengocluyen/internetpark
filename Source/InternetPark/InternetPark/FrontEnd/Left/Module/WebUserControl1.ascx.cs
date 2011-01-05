@@ -10,25 +10,14 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
-using InternetPark.Core;
 
 namespace InternetPark.FrontEnd.Left.Module
 {
-    public partial class Categories : System.Web.UI.UserControl
+    public partial class WebUserControl1 : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public string GetParentCategory()
-        {
-            string str = "";
-            foreach (Category cate in Category.GetParentCategory())
-            {
-                str += string.Format(@"<li>{0}</li>",cate.Name);
-            }
-            return str;
         }
     }
 }
