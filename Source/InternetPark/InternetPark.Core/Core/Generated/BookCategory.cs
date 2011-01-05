@@ -17,8 +17,8 @@ namespace InternetPark.Core
         public override object Id
         {
 
-            get { return BookCategoryID; }
-            set { BookCategoryID = (int)value; }
+            get { return CategoryID; }
+            set { CategoryID = (int)value; }
         }
         public object Id2 {
             get { return BookID; }
@@ -27,7 +27,7 @@ namespace InternetPark.Core
         }
 
         [SubSonicPrimaryKey]
-        public int BookCategoryID { get; set; }
+        public int CategoryID { get; set; }
         [SubSonicPrimaryKey]
         public int BookID { get; set; }
         
@@ -42,13 +42,13 @@ namespace InternetPark.Core
         {
             if (id != null && id2 != null)
             {
-                BookCategory entity = Find(p => p.BookID == id2 && p.BookCategoryID == id).FirstOrDefault();
+                BookCategory entity = Find(p => p.BookID == id2 && p.CategoryID == id).FirstOrDefault();
                 if (entity != null)
                     entity.CopyTo<BookCategory>(this);
                 else
                 {
                     this.BookID = 0;
-                    this.BookCategoryID = 0;
+                    this.CategoryID = 0;
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace InternetPark.Core
         public bool Save()
         {
             bool rs = false;
-            if (BookID > 0&&BookCategoryID>0)
+            if (BookID > 0&&CategoryID>0)
                 rs = Update(this) > 0;
             else
                 rs = Add(this) != null;
