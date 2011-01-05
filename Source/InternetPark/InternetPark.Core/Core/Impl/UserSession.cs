@@ -6,7 +6,7 @@ using StructureMap;
 
 namespace InternetPark.Core
 {
-    public class UserSession:IUserSession
+    public class UserSession : IUserSession
     {
         private IWebContext _webContext;
 
@@ -50,6 +50,16 @@ namespace InternetPark.Core
             {
                 _webContext.Username = value;
             }
+        }
+        public Role RoleCurrentUser
+        {
+            get { return _webContext.RoleCurrentUser; }
+            set { _webContext.RoleCurrentUser = value; }
+        }
+        public DateTime TimeUserLogin
+        {
+            get { return _webContext.TimeUserLogin; }
+            set { _webContext.TimeUserLogin = value; }
         }
     }
 }
