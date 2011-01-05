@@ -15,11 +15,20 @@ namespace InternetPark.Core
         {
             return Book.GetPaged(page - 1, pagesize);
         }
-        public static List<BookCategory> GetBooksByCategory(int idCate)
+        public static List<BookCategory> GetBookCategoryByCategory(int idCate)
         {
             return BookCategory.Find(b => b.BookCategoryID == idCate);
-
         }
-        
+        public static List<Book> GetBookByCategory(int idCate)
+        {
+            List<BookCategory> listBookCate = GetBookCategoryByCategory(idCate);
+            List<Book> listBooks = new List<Book>();
+            foreach (BookCategory bc in listBookCate)
+            {
+                listBooks.Add(Book.Single(bc.BookID));
+            }
+            return listBooks;
+        }
+
     }
 }
