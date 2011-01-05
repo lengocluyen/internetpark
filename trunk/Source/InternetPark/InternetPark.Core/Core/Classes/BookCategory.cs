@@ -10,8 +10,10 @@ namespace InternetPark.Core
     public partial class BookCategory
     {
         // all method is static 
-        public static List<Category> GetAll()
-        { return Category.All().ToList(); }
+        public static int CountBookByCategoryID(int idCategory)
+        {
+            return BookCategory.Find(p => p.CategoryID == idCategory).Count;
+        }
     }
 }
 
