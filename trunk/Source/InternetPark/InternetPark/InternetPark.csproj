@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{695A58DC-9E43-4CE0-928F-7AE9862AEC27}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -33,10 +33,6 @@
     <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>App_Data\AjaxControlToolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="InternetPark.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\InternetPark.Core\bin\Debug\InternetPark.Core.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap, Version=2.5.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -309,8 +305,8 @@
       <DependentUpon>LeftContent.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -344,6 +340,13 @@
       <DependentUpon>Books_ViewMore.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="FrontEnd\Center\Module\Book_Detail.ascx.cs">
+      <DependentUpon>Book_Detail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Center\Module\Book_Detail.ascx.designer.cs">
+      <DependentUpon>Book_Detail.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Center\Module\Index.ascx.cs">
       <DependentUpon>Index.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -375,6 +378,13 @@
     </Compile>
     <Compile Include="FrontEnd\Left\Module\Categories.ascx.designer.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Right\Module\Interesting_Books.ascx.cs">
       <DependentUpon>Interesting_Books.ascx</DependentUpon>
@@ -848,20 +858,34 @@
     <Content Include="CMS\UCFunction\ImportBookExcel.ascx" />
     <Content Include="CMS\UCFunction\Pager.ascx" />
     <Content Include="CMS\UCFunction\Statistics.ascx" />
+    <Content Include="FrontEnd\Center\Module\Book_Detail.ascx" />
+    <Content Include="FrontEnd\Left\Module\WebUserControl1.ascx" />
     <Content Include="Images\alt.jpg" />
+    <Content Include="Javascript\simpletreemenu.js" />
     <Content Include="MasterPage_FE.Master" />
+    <Content Include="obj\Debug\InternetPark.csproj.FileListAbsolute.txt" />
     <Content Include="Resources\images\images.zip" />
     <Content Include="statistics.xml" />
+    <Content Include="Style\simpletree.css" />
     <Content Include="Upload\Images\2.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="TemplateExcel\TemplateExcelBook.xlsx" />
     <None Include="Upload\Books\Apress.Pro.ASP.NET.4.CMS.Advanced.Techniques.pdf" />
     <None Include="Upload\Books\Apress.Pro.ASP.NET.4.in.CSharp.2010.pdf" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InternetPark.Core\InternetPark.Core.csproj">
+      <Project>{55D64652-E0BF-4DC9-8D51-0294A4085D84}</Project>
+      <Name>InternetPark.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="FrontEnd\Banner\Module\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Resources\scripts\tiny_mce\plugins\autosave\images\" />
     <Folder Include="Resources\scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
     <Folder Include="Resources\scripts\tiny_mce\plugins\spellchecker\includes\" />
@@ -886,9 +910,6 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
