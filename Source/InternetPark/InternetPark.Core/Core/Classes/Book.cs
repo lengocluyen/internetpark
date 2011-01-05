@@ -17,7 +17,7 @@ namespace InternetPark.Core
         }
         public static List<BookCategory> GetBookCategoryByCategory(int idCate)
         {
-            return BookCategory.Find(b => b.BookCategoryID == idCate);
+            return BookCategory.Find(b => b.CategoryID == idCate);
         }
         public static List<Book> GetBookByCategory(int idCate)
         {
@@ -29,6 +29,14 @@ namespace InternetPark.Core
             }
             return listBooks;
         }
-
+        public static long CountTotalDownload()
+        {
+            long total = 0;
+            foreach (Book i in All())
+            {
+                total += i.Downloads;
+            }
+            return total;
+        }
     }
 }

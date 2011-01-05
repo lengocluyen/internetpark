@@ -11,10 +11,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class _Default : System.Web.UI.Page
+namespace InternetPark.FrontEnd.Center.Module
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class Book_Detail : System.Web.UI.UserControl
     {
-        //string a = InternetPark.Core.Category.C(); 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
