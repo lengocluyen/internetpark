@@ -77,6 +77,8 @@
     <Compile Include="Core\Generated\Role.cs" />
     <Compile Include="Core\Generated\User.cs" />
     <Compile Include="Core\Handle\Pager.cs" />
+    <Compile Include="Core\Handle\Statistics.cs" />
+    <Compile Include="Core\Handle\Utils.cs" />
     <Compile Include="Core\ICaptcha.cs" />
     <Compile Include="Core\IConfiguration.cs" />
     <Compile Include="Core\Impl\Captcha.cs" />
@@ -87,10 +89,28 @@
     <Compile Include="Core\IRedirector.cs" />
     <Compile Include="Core\IUserSession.cs" />
     <Compile Include="Core\IWebContext.cs" />
+    <Compile Include="Core\Library\LibConvert.cs" />
+    <Compile Include="Core\Library\LibExcel.cs" />
+    <Compile Include="Core\Library\LibFile.cs" />
     <Compile Include="Helper\QueryHelper.cs" />
     <Compile Include="Helper\_No_Change_Control.cs" />
     <Compile Include="Helper\_No_Change_Query.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DynamicQuery.dll" />
+    <Content Include="bin\Debug\StructureMap.dll" />
+    <Content Include="bin\Debug\SubSonic.Core.dll" />
+    <Content Include="obj\Debug\InternetPark.Core.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\InternetPark.Core.dll" />
+    <Content Include="obj\Debug\InternetPark.Core.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\Refactor\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
