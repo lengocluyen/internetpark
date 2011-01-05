@@ -10,6 +10,8 @@ namespace InternetPark.Core
     public partial class BookCategory
     {
         // all method is static 
+        public static List<Category> GetAll()
+        { return Category.All().ToList(); }
     }
 }
 

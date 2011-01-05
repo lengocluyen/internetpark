@@ -320,6 +320,13 @@
     <Compile Include="FrontEnd\Left\Module\Categories.ascx.designer.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Right\Module\Interesting_Books.ascx.cs">
       <DependentUpon>Interesting_Books.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -785,11 +792,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="FrontEnd\Left\Module\WebUserControl1.ascx" />
     <Content Include="Images\collapse.gif" />
     <Content Include="Images\expand.gif" />
     <Content Include="Javascript\simpletreemenu.js" />
     <Content Include="MasterPage_FE.Master" />
     <Content Include="Resources\images\images.zip" />
+    <Content Include="Style\simpletree.css" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\DynamicQuery.dll.refresh" />

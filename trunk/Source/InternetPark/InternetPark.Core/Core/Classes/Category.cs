@@ -15,6 +15,16 @@ namespace InternetPark.Core
         {
             return Category.GetPaged(page - 1, pagesize);
         }
+
+        public static List<Category> GetParentCategory()
+        {
+            return Category.Find(c => c.ParentID == 0);
+        }
+
+        public static List<Category> GetCategoryByParentId(int idParent)
+        {
+            return Category.Find(c => c.ParentID == idParent);
+        }
     }
 }
 
