@@ -6,7 +6,8 @@
     <br />
     <br />
     <div class="listbooks">
-        <div class="book">
+        <%=this.GetAllBooksOfCategory() %>
+        <%--<div class="book">
             <table class="photo-grid">
                 <tr>
                     <td>
@@ -136,7 +137,7 @@
                 &nbsp;
                 <a href="#">Learn more</a>
             </div>
-        </div>
+        </div>--%>
     </div>
     <div class="clear">
     </div>

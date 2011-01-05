@@ -26,8 +26,28 @@ namespace InternetPark.FrontEnd.Left.Module
             string str = "";
             foreach (Category cate in Category.GetParentCategory())
             {
-                str += string.Format(@"<li>{0}</li>",cate.Name);
+                if (Category.GetCategoryByParentId(cate.CategoryID).Count > 0)
+                {
+                    str += string.Format(@"<li>{0}", cate.Name);
+                    str += GetCategoryOfParentCategory(cate.CategoryID);
+                    str += "</li>";
+                }
+                else
+                {
+                    str += string.Format(@"<li>{0}</li>", cate.Name);
+                }
             }
+            return str;
+        }
+
+        private string GetCategoryOfParentCategory(int idParent)
+        {
+            string str = "<ul>";
+            foreach (Category cate in Category.GetCategoryByParentId(idParent))
+            {
+                str += string.Format(@"<li><a href=""?{0}={1}"">{2}</a></li>",_No_Change_Query.cate,cate.Id,cate.Name);
+            }
+            str += "</ul>";
             return str;
         }
     }
