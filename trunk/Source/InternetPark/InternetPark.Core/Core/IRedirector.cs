@@ -6,6 +6,8 @@ namespace InternetPark.Core
     public interface IRedirector
     {
         void GoToHomePage();
+        void GotoLoginPage();
         void GoToErrorPage();
+        void GotoAdminPage();
     }
 }
