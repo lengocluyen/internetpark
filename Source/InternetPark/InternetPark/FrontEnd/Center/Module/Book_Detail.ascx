@@ -7,15 +7,17 @@
     <br />
     <br />
     <div class="listbooks">
-        <div class="book">
+        <asp:Repeater ID="rptBook" runat="server">
+            <ItemTemplate>
+            <div class="book">
             <div class="bookdetails">
-                <span class="booktitle"><a href="#">Professional ASP.NET Design Patterns</a></span><br />
+                <span class="booktitle"><%#DataBinder.Eval(Container.DataItem,"Title")%></span><br />
                 <br />
-                <span class="bookdetail">Ngày cập nhật: 17/10/2010 6:51:09 SA Lượt xem: 339 Lượt tải:
-                    109 Bình luận: 2 </span>
+                <span class="bookdetail">Ngày cập nhật: <%#DataBinder.Eval(Container.DataItem,"Created")%> Lượt xem: <%#DataBinder.Eval(Container.DataItem,"Hits")%> Lượt tải:
+                    <%#DataBinder.Eval(Container.DataItem,"Downloads")%> </span>
             </div>
             <div class="bookdownload" style="text-align:left;padding:10px 0px 5px 0px;">
-                <a href="#">Download</a>
+                <a href="?<%=InternetPark.Core._No_Change_Query._down%>=download&<%=InternetPark.Core._No_Change_Query.book%>=<%#DataBinder.Eval(Container.DataItem,"BookID")%>" target="_blank">Download</a>
             </div>
             <div style="min-height:200px;">
                 <div>
@@ -24,45 +26,22 @@
                             <td>
                                 <a href="#">
                                     <div class="pg-album grid_4 alpha">
-                                        <img src="Images/bia.jpeg" alt="image" /></div>
+                                        <img src="<%# DataBinder.Eval(Container.DataItem,"Image")%>" alt="image" /></div>
                                 </a>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="bookintro">
-                    Professional ASP.NET Design Patterns will show you how to implement design patterns
-                    in real ASP.NET applications by introducing you to the basic OOP skills needed to
-                    understand and interpret design patterns. A sample application used throughout the
-                    book is an enterprise level ASP.NET website with multi–tiered, SOA design techniques
-                    that can be applied to your future ASP.NET projects. Read about each design pattern
-                    in detail, including how to interpret the UML design, how to implement it in ASP.NET,
-                    its importance for ASP.NET development, and how it’s integrated into the final project.
-                    Professional ASP.NET Design Patterns will show you how to implement design patterns
-                    in real ASP.NET applications by introducing you to the basic OOP skills needed to
-                    understand and interpret design patterns. A sample application used throughout the
-                    book is an enterprise level ASP.NET website with multi–tiered, SOA design techniques
-                    that can be applied to your future ASP.NET projects. Read about each design pattern
-                    in detail, including how to interpret the UML design, how to implement it in ASP.NET,
-                    its importance for ASP.NET development, and how it’s integrated into the final project.
-                    Professional ASP.NET Design Patterns will show you how to implement design patterns
-                    in real ASP.NET applications by introducing you to the basic OOP skills needed to
-                    understand and interpret design patterns. A sample application used throughout the
-                    book is an enterprise level ASP.NET website with multi–tiered, SOA design techniques
-                    that can be applied to your future ASP.NET projects. Read about each design pattern
-                    in detail, including how to interpret the UML design, how to implement it in ASP.NET,
-                    its importance for ASP.NET development, and how it’s integrated into the final project.
-                    Professional ASP.NET Design Patterns will show you how to implement design patterns
-                    in real ASP.NET applications by introducing you to the basic OOP skills needed to
-                    understand and interpret design patterns. A sample application used throughout the
-                    book is an enterprise level ASP.NET website with multi–tiered, SOA design techniques
-                    that can be applied to your future ASP.NET projects. Read about each design pattern
-                    in detail, including how to interpret the UML design, how to implement it in ASP.NET,
-                    its importance for ASP.NET development, and how it’s integrated into the final project.
+                    <%# DataBinder.Eval(Container.DataItem,"FullText")%>
                 </div>
             </div>
         </div>
         <hr />
+            </ItemTemplate>
+        </asp:Repeater>
+        <%--<%=this.GetBook() %>--%>
+        
     </div>
     <div class="clear">
     </div>

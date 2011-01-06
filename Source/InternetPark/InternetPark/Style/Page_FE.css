@@ -1,0 +1,91 @@
+﻿a.num
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #484848;
+	text-decoration: none;
+}
+a.num:link
+{
+	font-family: tahoma,verdana,arial;
+	font-weight: normal;
+	font-size: 8.5pt;
+	color: #484848;
+	text-decoration: none;
+}
+a.num:visited
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #484848;
+	text-decoration: none;
+}
+a.num:active
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #484848;
+	text-decoration: none;
+}
+a.num:hover
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: bold;
+	color: #ff6600;
+	text-decoration: none;
+}
+
+a.num1
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #0000FF;
+	text-decoration: none;
+}
+a.num1:link
+{
+	font-family: tahoma,verdana,arial;
+	font-weight: normal;
+	font-size: 8.5pt;
+	color: #0000FF;
+	text-decoration: none;
+}
+/*a.num1:visited
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #0000FF;
+	text-decoration: none;
+}
+a.num1:active
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: normal;
+	color: #0000FF;
+	text-decoration: none;
+}*/
+a.num1:hover
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: bold;
+	color: #ff6600;
+	text-decoration: none;
+}
+.num1
+{
+	font-family: tahoma,verdana,arial;
+	font-size: 8.5pt;
+	font-weight: bold;
+	color: #0000FF;
+	text-decoration: none;
+}
+span.num1
+{color:#0000FF;}
