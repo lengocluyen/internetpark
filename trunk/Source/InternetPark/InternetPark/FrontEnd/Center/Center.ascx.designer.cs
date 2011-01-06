@@ -20,13 +20,4 @@ public partial class FrontEnd_Center_Center {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Panel CenterPanel;
-    
-    /// <summary>
-    /// Book_Detail1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::InternetPark.FrontEnd.Center.Module.Book_Detail Book_Detail1;
 }

@@ -12,5 +12,14 @@ namespace InternetPark.FrontEnd.Center.Module {
     
     
     public partial class Books {
+        
+        /// <summary>
+        /// rptBook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptBook;
     }
 }

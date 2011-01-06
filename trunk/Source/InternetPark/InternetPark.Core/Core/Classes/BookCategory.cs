@@ -14,6 +14,11 @@ namespace InternetPark.Core
         {
             return BookCategory.Find(p => p.CategoryID == idCategory).Count;
         }
+
+        public static BookCategory GetBookCategoryByIdBook(int idBook)
+        { //return BookCategory.Find(p=>p.BookID==idBook).FirstOrDefault(); 
+            return BookCategory.Single(p=>p.BookID==idBook);
+        }
     }
 }
 

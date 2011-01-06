@@ -13,6 +13,7 @@
     <link href="Style/reset.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="Style/style.css" rel="stylesheet" type="text/css" />
     <link href="Style/simpletree.css" rel="stylesheet" type="text/css" />
+    <link href="Style/Page_FE.css" rel="stylesheet" type="text/css" />
     <script src="Javascript/simpletreemenu.js" type="text/javascript"></script>
     <%--<asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>--%>

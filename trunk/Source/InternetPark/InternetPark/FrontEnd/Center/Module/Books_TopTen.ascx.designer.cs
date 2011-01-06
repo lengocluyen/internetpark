@@ -11,7 +11,7 @@
 namespace InternetPark.FrontEnd.Center.Module {
     
     
-    public partial class Book_Detail {
+    public partial class Books_TopTen {
         
         /// <summary>
         /// rptBook control.

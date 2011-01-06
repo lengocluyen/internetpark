@@ -17,7 +17,7 @@ namespace InternetPark.Core
         public const string books_viewMore = rootCenter + "Books_ViewMore.ascx";
         public const string index = rootCenter + "Index.ascx";
         public const string book_detail = rootCenter + "Book_Detail.ascx";
-
+        public const string book_topten = rootCenter + "Books_TopTen.ascx";
         // left
         public const string rootLeft = "Left/Module/";
         public const string category = root + rootLeft + "Categories.ascx";

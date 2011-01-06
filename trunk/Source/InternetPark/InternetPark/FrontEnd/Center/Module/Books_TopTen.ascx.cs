@@ -12,30 +12,43 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using InternetPark.Core;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace InternetPark.FrontEnd.Center.Module
 {
-    public partial class Books : System.Web.UI.UserControl
+    public partial class Books_TopTen : System.Web.UI.UserControl
     {
-        protected string title = "";
+        protected string titile = "";
         ArrayList al = new ArrayList();
         protected string paggingCollection;
         List<Book> booksList = new List<Book>();
         List<Book> booksListPagging = new List<Book>();
-        string cate = "";
+        string more = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cate = QueryHelper.GetQueryString(Request, _No_Change_Query.cate);
-            if (cate != "")
+            more = QueryHelper.GetQueryString(Request, _No_Change_Query._more);
+            switch (more)
             {
-                title = Category.GetCategoryById(LibConvert.ConvertToInt(cate,0)).Name;
-                booksList = Book.GetBookByCategory(int.Parse(cate));
+                case "new_books":
+                    booksList = Book.GetBooks_NewBooks();
+                    titile = "Sách mới";
+                    break;
+                case "more_view":
+                    booksList = Book.GetBooks_MoreView();
+                    titile = "Sách xem nhiều";
+                    break;
+                case "more_download":
+                    booksList = Book.GetBooks_MoreDownload();
+                    titile = "Sách download nhiều";
+                    break;
+                default:
+                    break;
+            }
+            if (booksList.Count>0)
+            {                
                 foreach (Book bk in booksList)
                 { al.Add(bk); }
             }
-
             if (!IsPostBack)
             {
                 ShowInfomationPaging();
@@ -74,9 +87,11 @@ namespace InternetPark.FrontEnd.Center.Module
             ShowInfomationPaging();
 
             string link = "#";
+            BookCategory bc = new BookCategory();
             foreach (Book book in booksListPagging)
             {
-                link = string.Format(@"?{0}={1}&&{2}={3}", _No_Change_Query.cate, cate, _No_Change_Query.book, book.BookID);
+                bc = BookCategory.GetBookCategoryByIdBook(book.BookID);
+                link = string.Format(@"?{0}={1}&&{2}={3}", _No_Change_Query.cate, bc.CategoryID, _No_Change_Query.book, book.BookID);
                 str += string.Format(@"<div class=""book"">
                 <table class=""photo-grid"">
                     <tr>

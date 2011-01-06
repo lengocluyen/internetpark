@@ -92,6 +92,7 @@
     <Compile Include="Core\Library\LibConvert.cs" />
     <Compile Include="Core\Library\LibExcel.cs" />
     <Compile Include="Core\Library\LibFile.cs" />
+    <Compile Include="Helper\PageCollection.cs" />
     <Compile Include="Helper\QueryHelper.cs" />
     <Compile Include="Helper\_No_Change_Control.cs" />
     <Compile Include="Helper\_No_Change_Query.cs" />
