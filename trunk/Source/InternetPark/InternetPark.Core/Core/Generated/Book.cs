@@ -28,7 +28,7 @@ namespace InternetPark.Core
 		public string FullText { get; set; }
 		public DateTime? Created{ get; set; }
         public string Image {get;set;}
-        public long Size {get;set;}
+        public decimal Size {get;set;}
         public int Pages {get;set;}
         public int Downloads {get;set;}
         public int Hits {get;set;}
@@ -37,6 +37,7 @@ namespace InternetPark.Core
         public string Publisher {get;set;}
         public string Url {get;set;}
         public bool IsActive {get;set;}
+        public int CategoryID { get; set; }
         #endregion
 
         public Book()
