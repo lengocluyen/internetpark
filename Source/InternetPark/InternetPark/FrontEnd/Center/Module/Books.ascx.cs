@@ -31,7 +31,7 @@ namespace InternetPark.FrontEnd.Center.Module
             if (cate != "")
             {
                 title = Category.GetCategoryById(LibConvert.ConvertToInt(cate,0)).Name;
-                booksList = Book.GetBookByCategory(int.Parse(cate));
+                booksList = Book.GetBookByCategory(int.Parse(cate),1,2);
                 foreach (Book bk in booksList)
                 { al.Add(bk); }
             }

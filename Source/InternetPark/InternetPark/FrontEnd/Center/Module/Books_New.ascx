@@ -13,7 +13,7 @@
                     <table class="photo-grid">
                         <tr>
                             <td>
-                                <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                                <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                                     <div class="pg-album grid_4 alpha">
                                         <img src="<%# DataBinder.Eval(Container.DataItem,"Image")%>" alt="image" /></div>
                                 </a>
@@ -21,7 +21,7 @@
                         </tr>
                     </table>
                     <div class="bookdetails">
-                        <span class="booktitle"><a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                        <span class="booktitle"><a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                             <%#DataBinder.Eval(Container.DataItem,"Title")%></a></span>
                         <br />
                         <br />
@@ -38,7 +38,7 @@
                     </div>
                     <div class="bookdownload">
                         <a href="?<%=InternetPark.Core._No_Change_Query._down%>=download&<%=InternetPark.Core._No_Change_Query.book%>=<%#DataBinder.Eval(Container.DataItem,"BookID")%>"
-                            target="_blank">Download</a> &nbsp; <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                            target="_blank">Download</a> &nbsp; <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                                 Learn more</a>
                     </div>
                 </div>

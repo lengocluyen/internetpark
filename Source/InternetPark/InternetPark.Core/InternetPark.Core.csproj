@@ -66,6 +66,7 @@
     <Compile Include="Core\Classes\BookAttributeValue.cs" />
     <Compile Include="Core\Classes\BookCategory.cs" />
     <Compile Include="Core\Classes\Category.cs" />
+    <Compile Include="Core\Classes\Extension_File.cs" />
     <Compile Include="Core\Classes\Role.cs" />
     <Compile Include="Core\Classes\User.cs" />
     <Compile Include="Core\Generated\Attribute.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Core\Generated\BookAttributeValue.cs" />
     <Compile Include="Core\Generated\BookCategory.cs" />
     <Compile Include="Core\Generated\Category.cs" />
+    <Compile Include="Core\Generated\Extension_File.cs" />
     <Compile Include="Core\Generated\Role.cs" />
     <Compile Include="Core\Generated\User.cs" />
     <Compile Include="Core\Handle\Pager.cs" />

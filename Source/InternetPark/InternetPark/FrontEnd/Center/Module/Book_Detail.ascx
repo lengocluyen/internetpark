@@ -70,7 +70,7 @@
                     <ItemTemplate>
                         <li>
                             <img src="../../../Images/collapse.gif" alt="icon" border="0" />&nbsp;&nbsp;&nbsp;
-                            <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                            <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                                 <%# DataBinder.Eval(Container.DataItem,"Title")%></a></li>
                         <%--<li>
                             <img src="../../../Images/collapse.gif" alt="icon" border="0" />&nbsp;&nbsp;&nbsp;<a

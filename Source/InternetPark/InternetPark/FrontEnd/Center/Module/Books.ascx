@@ -14,7 +14,7 @@
                     <table class="photo-grid">
                         <tr>
                             <td>
-                                <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                                <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                                     <div class="pg-album grid_4 alpha">
                                         <img src="<%# DataBinder.Eval(Container.DataItem,"Image")%>" alt="image" /></div>
                                 </a>
@@ -22,7 +22,7 @@
                         </tr>
                     </table>
                     <div class="bookdetails">
-                        <span class="booktitle"><a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                        <span class="booktitle"><a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                         <%#DataBinder.Eval(Container.DataItem,"Title")%></a></span>
                         <br />
                         <br />
@@ -33,7 +33,7 @@
                         <%#DataBinder.Eval(Container.DataItem,"IntroText")%>
                     </div>
                     <div class="bookdownload">
-                        <a href="?<%=InternetPark.Core._No_Change_Query._down%>=download&<%=InternetPark.Core._No_Change_Query.book%>=<%#DataBinder.Eval(Container.DataItem,"BookID")%>" target="_blank">Download</a> &nbsp; <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%#InternetPark.Core.BookCategory.GetBookCategoryByIdBook(LibConvert.ConvertToInt(DataBinder.Eval(Container.DataItem,"BookID"),0)).CategoryID%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
+                        <a href="?<%=InternetPark.Core._No_Change_Query._down%>=download&<%=InternetPark.Core._No_Change_Query.book%>=<%#DataBinder.Eval(Container.DataItem,"BookID")%>" target="_blank">Download</a> &nbsp; <a href="?<%=InternetPark.Core._No_Change_Query.cate%>=<%# DataBinder.Eval(Container.DataItem,"CategoryID")%>&&<%=InternetPark.Core._No_Change_Query.book%>=<%# DataBinder.Eval(Container.DataItem,"BookID")%>&&<%=InternetPark.Core._No_Change_Query._view%>=true">
                             Learn more</a>
                     </div>
                 </div>
@@ -47,10 +47,10 @@
     <!-- pagination -->
     <div id="content">
         <div class="box">
-            <%=this.paggingCollection %>
-            <%--<div class="pagination pagination-left">
-                <div class="results grid_6">
-                    <span>showing results 1-10 of 207</span>
+            <%--<%=this.paggingCollection %>--%>
+            <div class="pagination pagination-left">
+                <div class="results">
+                    <span style="text-align:right;">Page 1/206</span>
                 </div>
                 <ul class="pager grid_8">
                     <li class="disabled">&laquo;</li>
@@ -64,7 +64,7 @@
                     <!--<li><a href="">207</a></li>-->
                     <li><a href="">&raquo;</a></li>
                 </ul>
-            </div>--%>
+            </div>
         </div>
     </div>
     <!--end pagination-->
