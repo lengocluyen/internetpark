@@ -27,12 +27,11 @@ namespace InternetPark.CMS.UCFunction
                 totalDownload = Book.CountTotalDownload();
                 rpCategory.DataSource = Category.All();
                 rpCategory.DataBind();
-                
             }
         }
         public string GetCountBookByCategory(object id)
         {
-            return BookCategory.CountBookByCategoryID(int.Parse(id.ToString())).ToString();
+            return Book.Find(p=>p.CategoryID==int.Parse(id.ToString())).Count().ToString();
         }
 
        

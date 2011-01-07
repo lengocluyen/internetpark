@@ -60,6 +60,7 @@ namespace InternetPark.CMS.UCFunction
 
         string DisplayFiles(string location)
         {
+            if (location == "") location = "~/Upload/";
             string physicalLocation = location;
 
             physicalLocation = MapPath(location);
@@ -94,7 +95,7 @@ namespace InternetPark.CMS.UCFunction
 
             for (int i = start; i < limit; i++)
             {
-                result += "<td align='left'><input style='background:#ccc;' type='reset' value='" + arrFiles[i].Name + "' onclick=\"opener.document.forms[0]." + Server.UrlDecode(Request.Params["idFill"].ToString()) + ".value = '" + clientLocation + arrFiles[i].Name + "';opener.document.forms[0]." + Server.UrlDecode(Request.Params["idSize"].ToString()) + ".value = '" + arrFiles[i].Length + " bytes'; window.close();\"/></td>";
+                result += "<td align='left'><input style='background:#DEDEDE;' type='reset' value='" + arrFiles[i].Name + "' onclick=\"opener.document.forms[0]." + Server.UrlDecode(Request.Params["idFill"].ToString()) + ".value = '" + clientLocation + arrFiles[i].Name + "';opener.document.forms[0]." + Server.UrlDecode(Request.Params["idSize"].ToString()) + ".value = '" + arrFiles[i].Length + " bytes'; window.close();\"/></td>";
 
                 if (i == limit - 1)
                     result += "</tr></table>";
@@ -107,7 +108,7 @@ namespace InternetPark.CMS.UCFunction
         bool CheckImageFile(string fileName)
         {
             string extension = fileName.Substring(fileName.Length - 3, 3).ToLower();
-            if (extension != "pdf" && extension != "chm" && extension != "doc" && extension != "docx" && extension != "rar" && extension != "zip" && extension != "html")
+            if (extension != "pdf" && extension != "chm" && extension != "doc" && extension != "docx" && extension != "rar" && extension != "zip" && extension != "html" && extension != "xlsx" && extension != "xls")
                 return false;
             return true;
         }

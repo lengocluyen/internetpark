@@ -63,7 +63,7 @@
                                     <%#DataBinder.Eval(Container.DataItem, "Title")%>
                                 </td>
                                  <td class="type">
-                                    <%#this.GetCategoryBook(DataBinder.Eval(Container.DataItem,"BookID"))%>
+                                    <%#this.GetCategoryBook(DataBinder.Eval(Container.DataItem,"CategoryID"))%>
                                 </td>
                                 <td class="created">
                                     <%#DataBinder.Eval(Container.DataItem, "Created")%>
@@ -72,7 +72,7 @@
                                     <%#DataBinder.Eval(Container.DataItem, "Downloads")%>
                                 </td>
                                 <td class="hits">
-                                    <%#DataBinder.Eval(Container.DataItem, "hits")%>
+                                    <%#DataBinder.Eval(Container.DataItem, "Hits")%>
                                 </td>
                                 <td align="center" class="enable">
                                     <asp:RadioButton ID="rdButton" runat="server" Checked='<%#DataBinder.Eval(Container.DataItem, "IsActive")%>' />

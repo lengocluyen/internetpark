@@ -19,9 +19,9 @@
 {
 	padding:3px 7px 3px 7px;
 	text-decoration: none; 
-	color:#098928; 
-	background:#E2FEEC;
-	border:1px solid #677537;
+	color:#000; 
+	background:#EAE9E9;
+	border:1px solid #CCC;
 	font-weight:bold;
 }
 .pager a 
@@ -29,11 +29,11 @@
 	padding:3px 7px 3px 7px;
 	width:20px;
 	height:18px;
-	color:#E2FEEC;
+	color:#000;
 	background:url('../Images/Num.JPG') no-repeat;
 	text-decoration: none;
-	border:1px solid #677537;
-	background:#098928;
+	border:1px solid #CCC;
+	background:#EAE9E9;
 }
 .pager a baPager
 {
@@ -42,15 +42,15 @@
 	height:18px;
 	background:url('../Images/BaPager.JPG') no-repeat;
 	text-decoration: none;
-	border:1px solid #677537;
-	background:#098928;
+	border:1px solid #CCC;
+	background:#EAE9E9;
 }
 
 .pager a:hover 
 {
 	text-decoration: none;
-	color:#098928;
-	background:white;
+	color:#FFF;
+	background:#CCC;
 }
 .pager 
 {	padding-top:5px; 

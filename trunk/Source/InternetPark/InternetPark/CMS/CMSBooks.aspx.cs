@@ -130,7 +130,11 @@ namespace InternetPark.CMS
         }
         public string GetCategoryBook(object id)
         {
-            return Category.Single(BookCategory.Single(b => b.BookID == int.Parse(id.ToString())).BookID).Name;
+            try
+            {
+                return Category.Single(int.Parse(id.ToString())).Name;
+            }
+            catch { return ""; }
         }
     }
 }

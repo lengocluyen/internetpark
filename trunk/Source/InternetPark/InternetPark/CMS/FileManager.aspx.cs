@@ -19,6 +19,9 @@ namespace InternetPark.CMS
                     case "books":
                         this.FileManager1.location = "~/Upload/Books/";
                         break;
+                    case "excel":
+                        this.FileManager1.location = "~/Upload/Excels/";
+                        break;
                     case "other":
                         this.FileManager1.location = "~/Upload/Books/";
                         break;
