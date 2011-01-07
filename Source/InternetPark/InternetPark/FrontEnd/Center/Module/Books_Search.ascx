@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Books_New.ascx.cs" Inherits="InternetPark.FrontEnd.Center.Module.Books_New" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Books_Search.ascx.cs"
+    Inherits="InternetPark.FrontEnd.Center.Module.Books_Search" %>
 <%@ Import Namespace="InternetPark.Core" %>
 <div class="widget_center">
     <h2 style="text-transform: capitalize;">

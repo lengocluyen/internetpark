@@ -20,6 +20,7 @@ public partial class FrontEnd_Center_Center : System.Web.UI.UserControl
         string cate = QueryHelper.GetQueryString(Request, _No_Change_Query.cate);
         string book = QueryHelper.GetQueryString(Request, _No_Change_Query.book);
         string more = QueryHelper.GetQueryString(Request, _No_Change_Query._more);
+        string search = QueryHelper.GetQueryString(Request, _No_Change_Query.search);
 
         if (book != "")// hien thi chi tiet sach
         {
@@ -27,18 +28,24 @@ public partial class FrontEnd_Center_Center : System.Web.UI.UserControl
         }
         else
         {
-            if (more != "")
-            { this.CenterPanel.Controls.Add(LoadControl(_No_Change_Control.book_topten)); }
+            if (search != "")
+            { this.CenterPanel.Controls.Add(LoadControl(_No_Change_Control.books_Search)); }
             else
             {
-                if (cate != "")// hien thi cac sach theo cateogry
-                {
-                    this.CenterPanel.Controls.Add(LoadControl(_No_Change_Control.books));
-                }
+                if (more != "")
+                { this.CenterPanel.Controls.Add(LoadControl(_No_Change_Control.book_topten)); }
                 else
-                { QueryMenu(menu); }
+                {
+                    if (cate != "")// hien thi cac sach theo cateogry
+                    {
+                        this.CenterPanel.Controls.Add(LoadControl(_No_Change_Control.books));
+                    }
+                    else
+                    { QueryMenu(menu); }
+                }
             }
         }
+
     }
 
     private void QueryMenu(string menu)

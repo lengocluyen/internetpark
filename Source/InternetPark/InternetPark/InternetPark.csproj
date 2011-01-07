@@ -86,8 +86,6 @@
     <Content Include="FrontEnd\Banner\Banner.ascx" />
     <Content Include="FrontEnd\Center\Center.ascx" />
     <Content Include="FrontEnd\Center\Module\Books.ascx" />
-    <Content Include="FrontEnd\Center\Module\Books_New.ascx" />
-    <Content Include="FrontEnd\Center\Module\Books_ViewMore.ascx" />
     <Content Include="FrontEnd\Center\Module\Index.ascx" />
     <Content Include="FrontEnd\Footer\Footer.ascx" />
     <Content Include="FrontEnd\Left\Left.ascx" />
@@ -336,16 +334,22 @@
       <DependentUpon>Books_New.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="FrontEnd\Center\Module\Books_New.ascx.designer.cs">
+      <DependentUpon>Books_New.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Center\Module\Books_Search.ascx.cs">
+      <DependentUpon>Books_Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Center\Module\Books_Search.ascx.designer.cs">
+      <DependentUpon>Books_Search.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Center\Module\Books_TopTen.ascx.cs">
       <DependentUpon>Books_TopTen.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Center\Module\Books_TopTen.ascx.designer.cs">
       <DependentUpon>Books_TopTen.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_ViewMore.ascx.cs">
-      <DependentUpon>Books_ViewMore.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Center\Module\Book_Detail.ascx.cs">
       <DependentUpon>Book_Detail.ascx</DependentUpon>
@@ -865,10 +869,14 @@
     <Content Include="CMS\UCFunction\ImportBookExcel.ascx" />
     <Content Include="CMS\UCFunction\Pager.ascx" />
     <Content Include="CMS\UCFunction\Statistics.ascx" />
+    <Content Include="FrontEnd\Center\Module\Books_New.ascx" />
+    <Content Include="FrontEnd\Center\Module\Books_Search.ascx" />
     <Content Include="FrontEnd\Center\Module\Books_TopTen.ascx" />
     <Content Include="FrontEnd\Center\Module\Book_Detail.ascx" />
     <Content Include="FrontEnd\Left\Module\WebUserControl1.ascx" />
     <Content Include="Images\alt.jpg" />
+    <Content Include="Images\collapse.gif" />
+    <Content Include="Images\expand.gif" />
     <Content Include="Javascript\simpletreemenu.js" />
     <Content Include="MasterPage_FE.Master" />
     <Content Include="obj\Debug\InternetPark.csproj.FileListAbsolute.txt" />
@@ -914,7 +922,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2959</DevelopmentServerPort>
+          <DevelopmentServerPort>54219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

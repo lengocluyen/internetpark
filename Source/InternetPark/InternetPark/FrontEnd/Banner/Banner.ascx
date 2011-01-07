@@ -16,10 +16,13 @@
         </div>
         <div class="search">
             <div style="width: 310px; text-align: left; float: left;">
-                <asp:TextBox ID="txtSearch" runat="server" Width="300px"></asp:TextBox></div>
+                <asp:TextBox ID="txtSearch" runat="server" Width="300px" 
+                    Text="Nhập tên sách cần tìm" ForeColor="#EAEBBD" 
+                    OnTextChanged="txtSearch_TextChanged"></asp:TextBox></div>
             &nbsp;&nbsp;
             <div style="width: 110px; float: left; text-align: right;">
-                <asp:LinkButton ID="lnkSearch" runat="server" Height="25px">
+                <asp:LinkButton ID="lnkSearch" runat="server" Height="25px" 
+                    OnClick="lnkSearch_Click">
                 <img src="Images/btn_search.png" /></asp:LinkButton></div>
         </div>
     </div>

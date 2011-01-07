@@ -12,38 +12,32 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using InternetPark.Core;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace InternetPark.FrontEnd.Center.Module
 {
-    public partial class Books : System.Web.UI.UserControl
+    public partial class Books_Search : System.Web.UI.UserControl
     {
-        protected string title = "";
         ArrayList al = new ArrayList();
         protected string paggingCollection;
         List<Book> booksList = new List<Book>();
         List<Book> booksListPagging = new List<Book>();
-        string cate = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cate = QueryHelper.GetQueryString(Request, _No_Change_Query.cate);
-            if (cate != "")
+            booksList = Book.GetBooks_ByName(LibConvert.ConvertToString(QueryHelper.GetQueryString(Request, _No_Change_Query.search), "NULL"));
+            if (booksList.Count > 0)
             {
-                title = Category.GetCategoryById(LibConvert.ConvertToInt(cate,0)).Name;
-                booksList = Book.GetBookByCategory(int.Parse(cate));
                 foreach (Book bk in booksList)
                 { al.Add(bk); }
             }
-
             if (!IsPostBack)
             {
                 ShowInfomationPaging();
-                rptBook.DataSource = booksListPagging;
-                rptBook.DataBind();
+                
+                rptBooks.DataSource = booksListPagging;
+                rptBooks.DataBind();
             }
         }
-
         public void ShowInfomationPaging()
         {
 
@@ -66,6 +60,6 @@ namespace InternetPark.FrontEnd.Center.Module
                 booksListPagging = booksList;
             }
 
-        }        
+        }
     }
 }

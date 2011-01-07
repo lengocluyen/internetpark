@@ -20,5 +20,15 @@ namespace InternetPark.FrontEnd.Banner
         {
 
         }
+
+        protected void lnkSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(string.Format(@"?{0}={1}",_No_Change_Query.search,txtSearch.Text.Trim()));
+        }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using InternetPark.Core;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace InternetPark.FrontEnd.Center.Module
 {
@@ -67,9 +68,9 @@ namespace InternetPark.FrontEnd.Center.Module
             }
             catch { }
 
-            if (booksList.Count > 2)
+            if (booksList.Count > _No_Change_Query.pageSize)
             {
-                PageCollection p = new PageCollection(2, 3, al);
+                PageCollection p = new PageCollection(_No_Change_Query.pageSize, 3, al);
                 paggingCollection = p.ShowInformation(query, false, "p");
                 foreach (Book info in p.DataSource)
                 { booksListPagging.Add(info); }
@@ -79,49 +80,6 @@ namespace InternetPark.FrontEnd.Center.Module
                 booksListPagging = booksList;
             }
 
-        }
-
-        public string GetAllBooksOfCategory()
-        {
-            string str = "";
-            ShowInfomationPaging();
-
-            string link = "#";
-            BookCategory bc = new BookCategory();
-            foreach (Book book in booksListPagging)
-            {
-                bc = BookCategory.GetBookCategoryByIdBook(book.BookID);
-                link = string.Format(@"?{0}={1}&&{2}={3}", _No_Change_Query.cate, bc.CategoryID, _No_Change_Query.book, book.BookID);
-                str += string.Format(@"<div class=""book"">
-                <table class=""photo-grid"">
-                    <tr>
-                        <td>
-                            <a href=""{0}"">
-                                <div class=""pg-album grid_4 alpha"">
-                                    <img src=""{1}"" alt=""image"" /></div>
-                            </a>
-                        </td>
-                    </tr>
-                </table>", link, book.Image);
-                str += string.Format(@"<div class=""bookdetails"">
-                        <span class=""booktitle""><a href=""{0}"">Professional ASP.NET Design Patterns</a></span><br />
-                        <br />
-                        <span class=""bookdetail"">Ngày cập nhật: {1} Lượt xem: {2} Lượt tải: {3} </span>
-                    </div>", link, book.Created, book.Hits, book.Downloads);
-                str += string.Format(@"<div class=""bookintro"">
-                        {0}
-                    </div>", book.IntroText);
-                str += string.Format(@"<div class=""bookdownload"">
-                            <a href=""{0}"">Download</a>
-                            &nbsp;
-                            <a href=""{1}"">Learn more</a>
-                        </div>", book.Url, link);
-                str += @"
-                    </div>
-                    <hr />";
-            }
-
-            return str;
-        }
+        }        
     }
 }

@@ -9,7 +9,10 @@ namespace InternetPark.Core
 {
     public partial class BookAttributeValue
     {
-        // all method is static 
+        public static List<BookAttributeValue> GetBookAttribute_ByIdBook(int idBook)
+        {
+            return BookAttributeValue.Find(p => p.BookID == idBook);
+        }
     }
 }
 
