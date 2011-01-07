@@ -109,7 +109,7 @@ namespace InternetPark.CMS.UCFunction
             DateTime create = DateTime.Now;
             string image = this.txtImage.Text.Trim();
             string url = this.txtUrl.Text.Trim();
-            long size = int.Parse(txtSize.Text.Trim());
+            int size = int.Parse(txtSize.Text.Trim());
             int pages= int.Parse(txtPages.Text.Trim());
             int downloads = 0;
             int hits = 0;
@@ -138,10 +138,10 @@ namespace InternetPark.CMS.UCFunction
                 book.Publisher = publisher;
                 book.IsActive = checkbox;
                 book.Url = url;
-                BookCategory bookcat = BookCategory.Single(u => u.BookID == aid);
-                bookcat.CategoryID = Category.Single(p => p.Name == category).CategoryID;
-                BookCategory.Update(bookcat);
-
+                //BookCategory bookcat = BookCategory.Single(u => u.BookID == aid);
+                //bookcat.CategoryID = Category.Single(p => p.Name == category).CategoryID;
+                //BookCategory.Update(bookcat);
+                book.CategoryID = Category.Single(p => p.Name == category).CategoryID;
                 Book.Update(book);
             }
             else if (uDo == "add")
@@ -166,9 +166,12 @@ namespace InternetPark.CMS.UCFunction
                 book.Downloads = 0;
                 book.Hits = 0;
                 book.Created = create;
-                BookCategory bookcat = new BookCategory();
-                bookcat.CategoryID = Category.Single(p => p.Name == category).CategoryID;
-                BookCategory.Add(bookcat);
+                //BookCategory bookcat = new BookCategory();
+                //bookcat.CategoryID = Category.Single(p => p.Name == category).CategoryID;
+
+                //BookCategory.Add(bookcat);
+
+                book.CategoryID = Category.Single(p => p.Name == category).CategoryID;
                 Book.Add(book);
             }
             Response.Redirect("CMSBooks.aspx");

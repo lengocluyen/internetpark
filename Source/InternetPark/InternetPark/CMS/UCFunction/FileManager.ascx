@@ -6,7 +6,7 @@
     <table style="float: left;" width="30%">
         <tr>
             <td align="center">
-                <b>Thư Mục Hình Ảnh</b>
+                <b>Thư Mục Dữ Liệu</b>
             </td>
         </tr>
         <tr>
@@ -38,9 +38,9 @@
         </tr>
     </table>
 </div>
-<div style="heiht:20px;width:100%;clear:both"></div>
+<div style="height:20px;width:100%;clear:both"></div>
 <div style="width: 100%; text-align: center">
     <b>Upload File</b>
     <asp:FileUpload ID="FileUpload" runat="server" />
-    <asp:Button ID="btnUpload" runat="server" Text="Upload" Width="70px" OnClick="btnUpload_Click" />
+    <asp:Button ID="btnUpload" runat="server" Text="Upload" BackColor="#CECECE" Width="70px" OnClick="btnUpload_Click" />
 </div>
