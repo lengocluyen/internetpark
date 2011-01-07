@@ -21,25 +21,27 @@ namespace InternetPark.Core
         /// </summary>
         /// <param name="idCate"></param>
         /// <returns></returns>
-        public static List<BookCategory> GetBookCategoryByCategory(int idCate)
-        {
-            return BookCategory.Find(b => b.CategoryID == idCate);
-        }
+        //public static List<BookCategory> GetBookCategoryByCategory(int idCate)
+        //{
+        //    return BookCategory.Find(b => b.CategoryID == idCate);
+        //}
 
         /// <summary>
         /// Lấy sách theo Category
         /// </summary>
         /// <param name="idCate"></param>
         /// <returns></returns>
-        public static List<Book> GetBookByCategory(int idCate)
+        public static List<Book> GetBookByCategory(int idCate,int page, int pageSize)
         {
-            List<BookCategory> listBookCate = GetBookCategoryByCategory(idCate);
-            List<Book> listBooks = new List<Book>();
-            foreach (BookCategory bc in listBookCate)
-            {
-                listBooks.Add(Book.Single(bc.BookID));
-            }
-            return listBooks;
+            page--;
+            return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();
+            //List<BookCategory> listBookCate = GetBookCategoryByCategory(idCate);
+            //List<Book> listBooks = new List<Book>();
+            //foreach (BookCategory bc in listBookCate)
+            //{
+            //    listBooks.Add(Book.Single(bc.BookID));
+            //}
+            //return listBooks;
         }
 
         /// <summary>
@@ -123,14 +125,9 @@ namespace InternetPark.Core
         /// <returns></returns>
         public static List<Book> GetBooks_Release(int idBook)
         {
-            BookCategory bc = BookCategory.GetBookCategoryByIdBook(idBook);
-            var b = from bc1 in BookCategory.All()
-                    where bc1.CategoryID == bc.CategoryID && bc1.BookID != idBook
-                    select bc1;
-            IEnumerable<Book> books = (from b1 in Book.All()
-                                       join m in b on b1.BookID equals m.BookID
-                                       select b1).ToList().Take(5);
-            return books.ToList();
+            int idCate = Book.Single(idBook).CategoryID;
+            var a = (from i in All() where i.CategoryID == idCate && i.BookID != idBook select i).Take(5);
+            return a.ToList();
         }
     }
 }

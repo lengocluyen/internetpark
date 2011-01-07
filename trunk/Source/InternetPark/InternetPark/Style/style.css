@@ -75,14 +75,15 @@ hr
 	padding: 0;
 	clear: both;
 	overflow: hidden;
+	text-align:center;
 }
 
 #content div.box div.pagination div.results
 {
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	float: left;
+	text-align: right;
+	/*float: left;*/
 }
 
 #content div.box div.pagination div.results span
