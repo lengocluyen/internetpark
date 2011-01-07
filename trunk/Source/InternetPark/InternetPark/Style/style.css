@@ -236,28 +236,13 @@ hr
 {text-decoration:none;color:#0066D4;}
 .widget ul li a:hover
 {color:Red;}
-
-/*.treeview li{ 
-background: #F6F6E2 url('../Images/collapse.gif') no-repeat left center;
-list-style-type: none;
-margin-top: 10px;
-text-align:left;
-text-indent:20px;
-}
-
-.treeview li.submenu{ 
-background: #F6F6E2 url('../Images/expand.gif') no-repeat left center;
-cursor: hand !important;
-cursor: pointer !important;
-}
-
-
-.treeview li.submenu ul{ 
-display: none;
-font-size:12px;
-padding-left:15px;
-}
-
-.treeview .submenu ul li{ 
-cursor: default;*/
-}
+.book_release
+{width: 100%; font-size: 15px;}
+.book_release ul
+{padding-left:20px;font-size:13px;}
+.book_release ul li
+{padding-top:5px;}
+.book_release ul li a
+{text-decoration:none;color:#0036F1;}
+.book_release ul li a:hover
+{text-decoration:none;color:#FF0000;}

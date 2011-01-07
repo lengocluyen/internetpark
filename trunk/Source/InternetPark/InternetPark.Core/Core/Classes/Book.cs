@@ -15,7 +15,7 @@ namespace InternetPark.Core
         {
             return Book.GetPaged(page - 1, pagesize);
         }
-        
+
         /// <summary>
         /// Lấy sách thuộc danh mục theo Category
         /// </summary>
@@ -58,6 +58,7 @@ namespace InternetPark.Core
             }
             return null;
         }
+
         /// <summary>
         /// Tính lượt download của tất cả sách trong hệ thống
         /// </summary>
@@ -80,7 +81,7 @@ namespace InternetPark.Core
         {
             var a = (from i in Book.All()
                      select i).OrderByDescending(p => p.Hits).Take(10);
-            return a.ToList();    
+            return a.ToList();
         }
 
         /// <summary>
@@ -103,6 +104,33 @@ namespace InternetPark.Core
             var a = (from i in Book.All()
                      select i).OrderByDescending(p => p.Created).Take(10);
             return a.ToList();
+        }
+
+        /// <summary>
+        /// Tìm sách theo tên, chức năng tìm sách
+        /// </summary>
+        /// <param name="nameBook"></param>
+        /// <returns></returns>
+        public static List<Book> GetBooks_ByName(string nameBook)
+        {
+            return Book.Find(p => p.Title.Contains(nameBook));
+        }
+
+        /// <summary>
+        /// Lấy sách cùng thể loại với sách có mã là idBook
+        /// </summary>
+        /// <param name="idBook"></param>
+        /// <returns></returns>
+        public static List<Book> GetBooks_Release(int idBook)
+        {
+            BookCategory bc = BookCategory.GetBookCategoryByIdBook(idBook);
+            var b = from bc1 in BookCategory.All()
+                    where bc1.CategoryID == bc.CategoryID && bc1.BookID != idBook
+                    select bc1;
+            IEnumerable<Book> books = (from b1 in Book.All()
+                                       join m in b on b1.BookID equals m.BookID
+                                       select b1).ToList().Take(5);
+            return books.ToList();
         }
     }
 }

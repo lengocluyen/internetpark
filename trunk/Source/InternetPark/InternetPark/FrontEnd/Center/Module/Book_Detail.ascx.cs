@@ -15,16 +15,32 @@ using System.Collections.Generic;
 
 namespace InternetPark.FrontEnd.Center.Module
 {
+    
     public partial class Book_Detail : System.Web.UI.UserControl
     {
+        protected int release = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             string bookId = QueryHelper.GetQueryString(Request, _No_Change_Query.book);
             if (bookId != "")
             {
+                // hien thi chi tiet sach
                 List<Book> book = Book.GetBookById(LibConvert.ConvertToInt(bookId, 0),true);
                 rptBook.DataSource = book;
                 rptBook.DataBind();
+                
+                // hien thi cac sach cungthe loai
+                List<Book> releaseBooks = Book.GetBooks_Release(LibConvert.ConvertToInt(bookId, 0));
+                rptRelease.DataSource = releaseBooks;
+                rptRelease.DataBind();
+
+                // hien thi cac file phu neu co
+                release = BookAttributeValue.GetBookAttribute_ByIdBook(LibConvert.ConvertToInt(bookId, 0)).Count;
+                if (release > 0)
+                {
+                    rptExtensionFile.DataSource = Extension_File.GetAttributeOfBook(LibConvert.ConvertToInt(bookId, 0));
+                    rptExtensionFile.DataBind();
+                }
             }
         }
 
