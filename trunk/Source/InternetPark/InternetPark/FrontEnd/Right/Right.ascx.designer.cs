@@ -21,5 +21,14 @@ namespace InternetPark.FrontEnd.Right {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::InternetPark.FrontEnd.Right.Module.Interesting_Books Interesting_Books1;
+        
+        /// <summary>
+        /// Link1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::InternetPark.FrontEnd.Right.Module.Link Link1;
     }
 }

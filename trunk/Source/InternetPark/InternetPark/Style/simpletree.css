@@ -4,25 +4,32 @@ padding: 0;
 }
 
 .treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
-background: #F6F6E2 url(../Images/collapse.gif) no-repeat left center;
+background: #13669C url(../Images/collapse.gif) no-repeat left center;
 list-style-type: none;
 padding-left: 22px;
-
 margin:10px 0px 3px 0px;
 text-align:left;
+border-bottom: solid 1px #6A6A00;
+font-size:14px;
+vertical-align:top;
 }
-
 .treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
-background: #F6F6E2 url(../Images/expand.gif) no-repeat left 1px;
+background: #13669C url(../Images/expand.gif) no-repeat left 5px;
 cursor: hand !important;
 cursor: pointer !important;
 }
-
-
 .treeview li.submenu ul{ /*Style for ULs that are children of LIs (submenu) */
 display: none; /*Hide them by default. Don't delete. */
+/*background-color:#1FA3DF;*/
+color:#ffffff;
 }
-
 .treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
 cursor: default;
+/*background-color:#1FA3DF;*/
 }
+.treeview .submenu ul li a, .treeview li a
+{color:#ffffff;text-decoration:none;}
+.treeview .submenu ul li a:active, .treeview li a:active
+{color:#FF0000;}
+.treeview .submenu ul li a:hover, .treeview li a:hover
+{color:#AAFFAA}

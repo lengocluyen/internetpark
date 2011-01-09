@@ -11,10 +11,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class FrontEnd_Center_Module_Index : System.Web.UI.UserControl
+namespace InternetPark.FrontEnd.Banner
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class Menu : System.Web.UI.UserControl
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

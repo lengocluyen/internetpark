@@ -31,7 +31,7 @@ namespace InternetPark.CMS.UCFunction
                 string folder = Server.MapPath("~/Upload/");
                 string file = Server.MapPath("~" + txtUrl.Text.Trim().Substring(2, txtUrl.Text.Trim().Length - 2));
                 LibExcel exceLib = new LibExcel(file, "", Path.Combine(folder, txtUrl.ClientID));
-                HandleDataImport(exceLib.GetAllBook());
+                //HandleDataImport(exceLib.GetAllBook());
             }
             catch
             {
@@ -79,8 +79,8 @@ namespace InternetPark.CMS.UCFunction
             if (File.Exists(link)) File.Delete(link);
             FileStream fs = new FileStream(link, FileMode.CreateNew);
             fs.Close();
-            LibExcel exceLib = new LibExcel(link);
-            exceLib.Export1Data2Exel(Session["listError"] as List<Book>);
+            //LibExcel exceLib = new LibExcel(link);
+            //exceLib.Export1Data2Exel(Session["listError"] as List<Book>);
             Response.Redirect(_configuration.RootURL + "Upload/temp.xls");
         }
         public void HandleDataImport(List<Book> listbooks)
