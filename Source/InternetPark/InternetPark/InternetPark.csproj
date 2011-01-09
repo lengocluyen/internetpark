@@ -82,7 +82,6 @@
     <Content Include="CMS\UserControl\Footer.ascx" />
     <Content Include="CMS\UserControl\Header.ascx" />
     <Content Include="CMS\UserControl\LeftContent.ascx" />
-    <Content Include="Default.aspx" />
     <Content Include="FrontEnd\Banner\Banner.ascx" />
     <Content Include="FrontEnd\Center\Center.ascx" />
     <Content Include="FrontEnd\Center\Module\Books.ascx" />
@@ -316,6 +315,13 @@
     <Compile Include="FrontEnd\Banner\Banner.ascx.designer.cs">
       <DependentUpon>Banner.ascx</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\Banner\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Banner\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Center\Center.ascx.cs">
       <DependentUpon>Center.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -362,6 +368,13 @@
       <DependentUpon>Index.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="FrontEnd\Center\Module\Slide.ascx.cs">
+      <DependentUpon>Slide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Center\Module\Slide.ascx.designer.cs">
+      <DependentUpon>Slide.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Footer\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +396,13 @@
     <Compile Include="FrontEnd\Left\Module\Books_Hightlight.ascx.designer.cs">
       <DependentUpon>Books_Hightlight.ascx</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\Left\Module\Books_More.ascx.cs">
+      <DependentUpon>Books_More.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Left\Module\Books_More.ascx.designer.cs">
+      <DependentUpon>Books_More.ascx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Left\Module\Categories.ascx.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,19 +410,19 @@
     <Compile Include="FrontEnd\Left\Module\Categories.ascx.designer.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.cs">
-      <DependentUpon>WebUserControl1.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Left\Module\WebUserControl1.ascx.designer.cs">
-      <DependentUpon>WebUserControl1.ascx</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\Right\Module\Interesting_Books.ascx.cs">
       <DependentUpon>Interesting_Books.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Right\Module\Interesting_Books.ascx.designer.cs">
       <DependentUpon>Interesting_Books.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Right\Module\Link.ascx.cs">
+      <DependentUpon>Link.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Right\Module\Link.ascx.designer.cs">
+      <DependentUpon>Link.ascx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Right\Right.ascx.cs">
       <DependentUpon>Right.ascx</DependentUpon>
@@ -414,12 +434,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage_FE.Master.cs">
-      <DependentUpon>MasterPage_FE.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage_FE.Master.designer.cs">
-      <DependentUpon>MasterPage_FE.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -873,12 +893,10 @@
     <Content Include="FrontEnd\Center\Module\Books_Search.ascx" />
     <Content Include="FrontEnd\Center\Module\Books_TopTen.ascx" />
     <Content Include="FrontEnd\Center\Module\Book_Detail.ascx" />
-    <Content Include="FrontEnd\Left\Module\WebUserControl1.ascx" />
     <Content Include="Images\alt.jpg" />
     <Content Include="Images\collapse.gif" />
     <Content Include="Images\expand.gif" />
     <Content Include="Javascript\simpletreemenu.js" />
-    <Content Include="MasterPage_FE.Master" />
     <Content Include="obj\Debug\InternetPark.csproj.FileListAbsolute.txt" />
     <Content Include="Resources\images\images.zip" />
     <Content Include="statistics.xml" />
@@ -887,6 +905,51 @@
     <Content Include="Upload\Images\2.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="FrontEnd\Banner\Menu.ascx" />
+    <Content Include="FrontEnd\Center\Module\Slide.ascx" />
+    <Content Include="FrontEnd\Left\Module\Books_More.ascx" />
+    <Content Include="FrontEnd\Right\Module\Link.ascx" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\bg_cate_body.png" />
+    <Content Include="Images\bg_cate_bottom_body.png" />
+    <Content Include="Images\bg_cate_bottom_left.png" />
+    <Content Include="Images\bg_cate_bottom_right.png" />
+    <Content Include="Images\bg_cate_left.png" />
+    <Content Include="Images\bg_cate_right.png" />
+    <Content Include="Images\bg_center_bottom.png" />
+    <Content Include="Images\bg_center_center.png" />
+    <Content Include="Images\bg_center_top.png" />
+    <Content Include="Images\bg_content_bottom_body.png" />
+    <Content Include="Images\bg_content_bottom_left.png" />
+    <Content Include="Images\bg_content_bottom_right.png" />
+    <Content Include="Images\bg_content_top_body.png" />
+    <Content Include="Images\bg_content_top_left.png" />
+    <Content Include="Images\bg_content_top_right.png" />
+    <Content Include="Images\bg_menu_center.png" />
+    <Content Include="Images\bg_menu_left.png" />
+    <Content Include="Images\bg_menu_right.jpg" />
+    <Content Include="Images\bg_menu_right.png" />
+    <Content Include="Images\bg_search_body.png" />
+    <Content Include="Images\bg_search_left.png" />
+    <Content Include="Images\bg_search_right.png" />
+    <Content Include="Images\bg_slide_bottom.png" />
+    <Content Include="Images\bg_slide_bottom_body.png" />
+    <Content Include="Images\bg_slide_bottom_left.png" />
+    <Content Include="Images\bg_slide_bottom_right.png" />
+    <Content Include="Images\bg_slide_top.png" />
+    <Content Include="Images\bg_slide_top_body.png" />
+    <Content Include="Images\bg_slide_top_left.png" />
+    <Content Include="Images\bg_slide_top_right.png" />
+    <Content Include="Images\bg_titile_center_bottom.png" />
+    <Content Include="Images\CTK30.JPG" />
+    <Content Include="Images\img_banner-07.png" />
+    <Content Include="Images\img_banner-09.png" />
+    <Content Include="Images\img_button_download.png" />
+    <Content Include="Images\img_button_more.png" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Style\style1.css" />
+    <Content Include="MasterPage.Master" />
     <None Include="obj\Debug\build.force" />
     <None Include="obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="TemplateExcel\TemplateExcelBook.xlsx" />
@@ -901,7 +964,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="FrontEnd\Banner\Module\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Resources\scripts\tiny_mce\plugins\autosave\images\" />
     <Folder Include="Resources\scripts\tiny_mce\plugins\spellchecker\classes\utils\" />

@@ -23,6 +23,15 @@ namespace InternetPark.FrontEnd.Left {
         protected global::InternetPark.FrontEnd.Left.Module.Categories Categories1;
         
         /// <summary>
+        /// Books_More1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::InternetPark.FrontEnd.Left.Module.Books_More Books_More1;
+        
+        /// <summary>
         /// Books_Hightlight1 control.
         /// </summary>
         /// <remarks>

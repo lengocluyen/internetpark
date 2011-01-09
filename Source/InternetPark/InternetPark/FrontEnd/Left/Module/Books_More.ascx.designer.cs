@@ -8,18 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InternetPark.FrontEnd.Center.Module {
+namespace InternetPark.FrontEnd.Left.Module {
     
     
-    public partial class Books_Search {
-        
-        /// <summary>
-        /// rptBooks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptBooks;
+    public partial class Books_More {
     }
 }

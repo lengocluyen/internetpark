@@ -45,7 +45,7 @@ namespace InternetPark.FrontEnd.Left.Module
             string str = "<ul>";
             foreach (Category cate in Category.GetCategoryByParentId(idParent))
             {
-                str += string.Format(@"<li><a href=""?{0}={1}"">{2}</a></li>",_No_Change_Query.cate,cate.Id,cate.Name);
+                str += string.Format(@"<li><a href=""?{0}={1}&&{2}={3}"">{4}</a></li>",_No_Change_Query.type,_No_Change_Query.cate,_No_Change_Query.cate,cate.Id,cate.Name);
             }
             str += "</ul>";
             return str;

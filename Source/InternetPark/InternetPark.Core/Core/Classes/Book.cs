@@ -15,17 +15,7 @@ namespace InternetPark.Core
         {
             return Book.GetPaged(page - 1, pagesize);
         }
-
-        /// <summary>
-        /// Lấy sách thuộc danh mục theo Category
-        /// </summary>
-        /// <param name="idCate"></param>
-        /// <returns></returns>
-        //public static List<BookCategory> GetBookCategoryByCategory(int idCate)
-        //{
-        //    return BookCategory.Find(b => b.CategoryID == idCate);
-        //}
-
+        
         /// <summary>
         /// Lấy sách theo Category
         /// </summary>
@@ -34,16 +24,15 @@ namespace InternetPark.Core
         public static List<Book> GetBookByCategory(int idCate,int page, int pageSize)
         {
             page--;
-            return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();
-            //List<BookCategory> listBookCate = GetBookCategoryByCategory(idCate);
-            //List<Book> listBooks = new List<Book>();
-            //foreach (BookCategory bc in listBookCate)
-            //{
-            //    listBooks.Add(Book.Single(bc.BookID));
-            //}
-            //return listBooks;
+            return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();            
         }
 
+        public static List<Book> GetBookByCategory(int idCate)
+        {
+            //page--;
+            //return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();
+            return Book.Find(p => p.CategoryID == idCate);
+        }
         /// <summary>
         /// Lấy sách theo Id của sách
         /// </summary>
@@ -79,10 +68,11 @@ namespace InternetPark.Core
         /// Lấy sách xem nhiều
         /// </summary>
         /// <returns></returns>
-        public static List<Book> GetBooks_MoreView()
+        public static List<Book> GetBooks_MoreView(int page,int pageSize)
         {
+            page--;
             var a = (from i in Book.All()
-                     select i).OrderByDescending(p => p.Hits).Take(10);
+                     select i).OrderByDescending(p => p.Hits).Skip(page*pageSize).Take(pageSize);
             return a.ToList();
         }
 
@@ -90,22 +80,24 @@ namespace InternetPark.Core
         /// Lấy sách download nhiều
         /// </summary>
         /// <returns></returns>
-        public static List<Book> GetBooks_MoreDownload()
+        public static List<Book> GetBooks_MoreDownload(int page,int pageSize)
         {
+            page--;
             var a = (from i in Book.All()
-                     select i).OrderByDescending(p => p.Downloads).Take(10);
-            return a.ToList();
+                     select i).OrderByDescending(p => p.Downloads).Skip(page * pageSize).Take(pageSize);
+            return a.ToList();            
         }
 
         /// <summary>
         /// Lấy sách mới
         /// </summary>
         /// <returns></returns>
-        public static List<Book> GetBooks_NewBooks()
+        public static List<Book> GetBooks_NewBooks(int page,int pageSize)
         {
+            page--;
             var a = (from i in Book.All()
-                     select i).OrderByDescending(p => p.Created).Take(10);
-            return a.ToList();
+                     select i).OrderByDescending(p => p.Created).Skip(page * pageSize).Take(pageSize);
+            return a.ToList();               
         }
 
         /// <summary>
@@ -113,9 +105,14 @@ namespace InternetPark.Core
         /// </summary>
         /// <param name="nameBook"></param>
         /// <returns></returns>
-        public static List<Book> GetBooks_ByName(string nameBook)
+        public static List<Book> GetBooks_ByName(string nameBook,int page,int pageSize)
         {
-            return Book.Find(p => p.Title.Contains(nameBook));
+            page--;
+            var a = (from i in Book.All()
+                     where i.Title.Contains(nameBook)
+                     orderby i.BookID
+                     select i).Skip(page * pageSize).Take(pageSize);
+            return a.ToList();
         }
 
         /// <summary>

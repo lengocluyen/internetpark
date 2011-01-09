@@ -15,14 +15,21 @@ namespace InternetPark.Core
         public const string book = "book";
         public const string _more = "new";
 
+        public const string type = "type";
+        public const string viewMore = "viewMore";
+        public const string downloadMore = "downloadMore";
+        public const string newBooks="newBooks";
+        public const string searchBooks = "searchBooks";
+
+
         public const string _down = "download";
         public const string _view = "view";
-        public const string search = "searchValue";
+        public const string searchValue = "searchValue";
         public const string _exFile = "extensionFile";
 
         /// <summary>
         /// Các hằng số truyền vào hàm
         /// </summary>
-        public const int pageSize = 4;
+        public const int pageSize = 1;
     }
 }
