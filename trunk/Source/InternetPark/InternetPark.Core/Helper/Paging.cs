@@ -26,19 +26,30 @@ namespace InternetPark.Core
             string str = "";
             string queryIndex = "";
             int totalIndex;
+            string type = "";
+
             if (totalPage % pageView == 0)
             { totalIndex = (totalPage / pageView); }
             else
             { totalIndex = (totalPage / pageView) + 1; }
+
+            type = QueryHelper.GetQueryString(HttpContext.Current.Request, _No_Change_Query.type);
             if (HttpContext.Current.Request.QueryString[para] != null)
             {
-                pageIndex = LibConvert.ConvertToInt(HttpContext.Current.Request.QueryString[para].ToString(), 0);
+                pageIndex = LibConvert.ConvertToInt(HttpContext.Current.Request.QueryString[para].ToString(), 0);                
             }
             if (!ajax)
             {
-                queryIndex = "" + query + "&" + para + "=" + pageIndex + "&" + indexSymbol + "=";
-                query = "" + query + "&" + para + "=";
-
+                if (type == "")
+                {
+                    queryIndex = "" + query + "?" + _No_Change_Query.type + "=" + _No_Change_Query.newBooks + "&" + para + "=" + pageIndex + "&" + indexSymbol + "=";
+                    query = "" + query + "?" + _No_Change_Query.type + "=" + _No_Change_Query.newBooks + "&" + para + "=";
+                }
+                else
+                {
+                    queryIndex = "" + query  + "&" + para + "=" + pageIndex + "&" + indexSymbol + "=";
+                    query = "" + query + "&" + para + "=";
+                }
             }
             if (totalPage <= 0)
             {
@@ -66,7 +77,14 @@ namespace InternetPark.Core
                 //str += string.Format(@"<li class=""current"">{0}</li>", pageIndex);
 
                 int numBegin = ((index - 1) * pageView) + 1;
-                for (int i = numBegin; i <= index * pageView; i++)
+                int k;
+                if (index * pageView > totalPage)
+                {
+                    k = (totalPage - ((index - 1) * pageView)) + pageView;
+                }
+                else
+                { k = index * pageView; }
+                for (int i = numBegin; i <= k; i++)
                 {
                     if (i != pageIndex)
                     {

@@ -10,9 +10,9 @@
     </div>
     <div class="cate_body">
         <ul>
-            <li>Đại học Đà Lạt</li>
-            <li>Khoa Công Nghệ Thông Tin</li>
-            <li>Công ty TNHH Minh Quân</li>
+            <li><a href="http://dlu.edu.vn" target="_blank">Đại học Đà Lạt</a></li>
+            <li><a href="http://it.dlu.edu.vn" target="_blank">Khoa Công Nghệ Thông Tin</a></li>
+            <li><a href="http://mqcomputer.com" target="_blank">Công ty TNHH Minh Quân</a></li>
         </ul>
     </div>
     <div class="cate_bottom">

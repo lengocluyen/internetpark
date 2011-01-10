@@ -48,37 +48,7 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-        <%--<div class="book">
-            <div class="photo-grid">
-                <a href="#">
-                    <div class="pg-album grid_4 alpha">
-                        <img src="Images/bia.jpeg" border="1px" alt="image" /></div>
-                </a>
-            </div>
-            <div class="bookdetails">
-                <span class="booktitle"><a href="#">Professional ASP.NET Design Patterns</a></span>
-                <br />
-                <br />
-                <span class="bookdetail">Ngày cập nhật: 12/12/2010 Lượt xem: 23 Lượt tải: 13 </span>
-            </div>
-            <div class="bookintro">
-                Professional ASP.NET Design Patterns will show you how to implement design patterns.Professional
-                ASP.NET Design Patterns will show you how to implement design patterns. Professional
-                ASP.NET Design Patterns will show you how to implement design patterns.Professional
-                ASP.NET Design Patterns will show you how to implement design patterns. Professional
-                ASP.NET Design Patterns will show you how to implement design patterns.Professional
-                ASP.NET Design Patterns will show you how to implement design patterns. Professional
-                ASP.NET Design Patterns will show you how to implement design patterns.Professional
-                ASP.NET Design Patterns will show you how to implement design patterns.
-            </div>
-            <div class="bookdownload">
-                <a href="#" target="_blank" title="Tải sách">
-                    <img src="Images/img_button_download.png" border="0" align="Download" /></a>
-                &nbsp; <a href="#" title="Xem chi tiết sách">
-                    <img src="Images/img_button_more.png" border="0" alt="Learn More" /></a>
-            </div>
-            <hr />
-        </div>--%>
+        
         <div id="paging_content">
             <div class="box">
                 <div class="pagination pagination-left">
@@ -99,9 +69,7 @@
                     </ul>--%>
                 </div>
             </div>
-        </div>
-        <div style="float: left; width: 95%; height: 50px;">
-        </div>
+        </div>        
     </div>
     <div class="slide_bottom">
         <div class="content_bottom_left">

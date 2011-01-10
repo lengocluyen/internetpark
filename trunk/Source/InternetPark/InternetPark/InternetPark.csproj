@@ -85,7 +85,6 @@
     <Content Include="FrontEnd\Banner\Banner.ascx" />
     <Content Include="FrontEnd\Center\Center.ascx" />
     <Content Include="FrontEnd\Center\Module\Books.ascx" />
-    <Content Include="FrontEnd\Center\Module\Index.ascx" />
     <Content Include="FrontEnd\Footer\Footer.ascx" />
     <Content Include="FrontEnd\Left\Left.ascx" />
     <Content Include="FrontEnd\Left\Module\Books_Hightlight.ascx" />
@@ -336,37 +335,12 @@
     <Compile Include="FrontEnd\Center\Module\Books.ascx.designer.cs">
       <DependentUpon>Books.ascx</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_New.ascx.cs">
-      <DependentUpon>Books_New.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_New.ascx.designer.cs">
-      <DependentUpon>Books_New.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_Search.ascx.cs">
-      <DependentUpon>Books_Search.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_Search.ascx.designer.cs">
-      <DependentUpon>Books_Search.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_TopTen.ascx.cs">
-      <DependentUpon>Books_TopTen.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Books_TopTen.ascx.designer.cs">
-      <DependentUpon>Books_TopTen.ascx</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\Center\Module\Book_Detail.ascx.cs">
       <DependentUpon>Book_Detail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Center\Module\Book_Detail.ascx.designer.cs">
       <DependentUpon>Book_Detail.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\Center\Module\Index.ascx.cs">
-      <DependentUpon>Index.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Center\Module\Slide.ascx.cs">
       <DependentUpon>Slide.ascx</DependentUpon>
@@ -889,9 +863,6 @@
     <Content Include="CMS\UCFunction\ImportBookExcel.ascx" />
     <Content Include="CMS\UCFunction\Pager.ascx" />
     <Content Include="CMS\UCFunction\Statistics.ascx" />
-    <Content Include="FrontEnd\Center\Module\Books_New.ascx" />
-    <Content Include="FrontEnd\Center\Module\Books_Search.ascx" />
-    <Content Include="FrontEnd\Center\Module\Books_TopTen.ascx" />
     <Content Include="FrontEnd\Center\Module\Book_Detail.ascx" />
     <Content Include="Images\alt.jpg" />
     <Content Include="Images\collapse.gif" />
