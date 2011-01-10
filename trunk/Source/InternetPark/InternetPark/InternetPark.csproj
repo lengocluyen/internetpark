@@ -918,6 +918,9 @@
     <Content Include="Images\img_banner-09.png" />
     <Content Include="Images\img_button_download.png" />
     <Content Include="Images\img_button_more.png" />
+    <Content Include="Images\leftMenu.png" />
+    <Content Include="Images\MidMenu.png" />
+    <Content Include="Images\rightMenu.png" />
     <Content Include="Images\spacer.gif" />
     <Content Include="Style\style1.css" />
     <Content Include="MasterPage.Master" />

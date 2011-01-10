@@ -25,7 +25,7 @@ namespace InternetPark.Core
         {
             page--;
 
-            return Book.GetPaged(page - 1, pagesize, "BookID", "Category=" + idCate);
+            //return Book.GetPaged(page - 1, pagesize, "BookID", "Category=" + idCate);
 
             return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();            
         }
