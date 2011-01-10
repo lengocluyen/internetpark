@@ -1,6 +1,6 @@
 ﻿body
 {
-	background:#1FA3DF url('../Images/bg.png') repeat-x;
+	background:#1EA0DA url('../Images/bg.png') repeat-x;
 	font-family:"Segoe UI", Tahoma, Geneva, Verdana;
 	font-size:13px;
 	margin:auto;
@@ -174,7 +174,7 @@
 }
 .slide_body
 {
-	float:left;width:568px;background-color:#13699E;border-left:1px #32A8E8 solid;border-right:1px #32A8E8 solid;text-align:center;
+	float:left;width:568px;background-color:#13669C;border-left:1px #32A8E8 solid;border-right:1px #32A8E8 solid;text-align:center;
 }
 .slide_top_left
 {
