@@ -36,9 +36,14 @@
                         </span>
                     </div>
                     <div class="bookintro">
-                        <%#DataBinder.Eval(Container.DataItem,"IntroText")%>
+                        <%#DataBinder.Eval(Container.DataItem, "IntroText")%>
                     </div>
-                    <div class="bookdownload">
+                    <div class="bookintro" style="width: 100%; float: left;">
+                        Nội dung:
+                        <br />
+                        <%#DataBinder.Eval(Container.DataItem,"FullText")%>
+                    </div>
+                    <div class="bookdownload1">
                         <a href="?<%=InternetPark.Core._No_Change_Query._down%>=download&<%=InternetPark.Core._No_Change_Query.book%>=<%#DataBinder.Eval(Container.DataItem,"BookID")%>"
                             target="_blank" title="Tải sách">
                             <img src="Images/img_button_download.png" border="0" align="Download" /></a>
@@ -48,7 +53,7 @@
         </asp:Repeater>
         <%if (release > 0)
           { %>
-        <div class="bookdownload" style="text-align: left; padding: 10px 0px 0px 0px;">
+        <div class="bookdownload1" style="text-align: left; padding: 10px 0px 0px 0px;">
             File đính kèm:
             <ul style="padding: 10px 0px 3px 25px;">
                 <asp:Repeater ID="rptExtensionFile" runat="server">

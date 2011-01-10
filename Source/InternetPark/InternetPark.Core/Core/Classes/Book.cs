@@ -24,9 +24,12 @@ namespace InternetPark.Core
         public static List<Book> GetBookByCategory(int idCate,int page, int pageSize)
         {
             page--;
+
+            return Book.GetPaged(page - 1, pagesize, "BookID", "Category=" + idCate);
+
             return (from i in All() where i.CategoryID == idCate orderby i.BookID select i).Skip(page * pageSize).Take(pageSize).ToList();            
         }
-
+       
         public static List<Book> GetBookByCategory(int idCate)
         {
             //page--;
@@ -75,7 +78,13 @@ namespace InternetPark.Core
                      select i).OrderByDescending(p => p.Hits).Skip(page*pageSize).Take(pageSize);
             return a.ToList();
         }
-
+        public static List<Book> GetBooks_MoreView()
+        {
+            
+            var a = (from i in Book.All()
+                     select i).OrderByDescending(p => p.Hits).Take(20);
+            return a.ToList();
+        }
         /// <summary>
         /// Lấy sách download nhiều
         /// </summary>
@@ -87,7 +96,13 @@ namespace InternetPark.Core
                      select i).OrderByDescending(p => p.Downloads).Skip(page * pageSize).Take(pageSize);
             return a.ToList();            
         }
-
+        public static List<Book> GetBooks_MoreDownload()
+        {
+            
+            var a = (from i in Book.All()
+                     select i).OrderByDescending(p => p.Downloads).Take(20);
+            return a.ToList();
+        }
         /// <summary>
         /// Lấy sách mới
         /// </summary>
@@ -100,6 +115,13 @@ namespace InternetPark.Core
             return a.ToList();               
         }
 
+        public static List<Book> GetBooks_NewBooks()
+        {
+            
+            var a = (from i in Book.All()
+                     select i).OrderByDescending(p => p.Created).Take(20);
+            return a.ToList();
+        }
         /// <summary>
         /// Tìm sách theo tên, chức năng tìm sách
         /// </summary>
@@ -114,7 +136,15 @@ namespace InternetPark.Core
                      select i).Skip(page * pageSize).Take(pageSize);
             return a.ToList();
         }
-
+        public static List<Book> GetBooks_ByName(string nameBook)
+        {
+            
+            var a = (from i in Book.All()
+                     where i.Title.Contains(nameBook)
+                     orderby i.BookID
+                     select i).Take(20);
+            return a.ToList();
+        }
         /// <summary>
         /// Lấy sách cùng thể loại với sách có mã là idBook
         /// </summary>

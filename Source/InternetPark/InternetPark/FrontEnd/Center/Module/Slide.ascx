@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="slide_body">
-        <img src="Images/CTK30.JPG" align="images" width="470px" height="250px" border="0"
+        <img src="Images/CTK30.JPG" align="images" width="550px" height="250px" border="0"
             align="middle" />
     </div>
     <div class="slide_bottom">
